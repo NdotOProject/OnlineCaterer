@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Lf6PZK4ajBlOfrdA7xk5wDBevwLZRyG6NYwHBL9TGMVpvr89B8vLML/oI/SFc3zDT0u1Xvb0zkmkZI2npWQczQ==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\Core\\OnlineCaterer.Application\\OnlineCaterer.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
