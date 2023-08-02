@@ -173,3 +173,4 @@ D:\Projects\Aptech\Semester_3\OnlineCaterer\src\API\OnlineCaterer.WebApi\bin\Deb
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\API\OnlineCaterer.WebApi\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\API\OnlineCaterer.WebApi\bin\Debug\net7.0\Mono.TextTemplating.dll
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\API\OnlineCaterer.WebApi\bin\Debug\net7.0\System.CodeDom.dll
+D:\Projects\Aptech\Semester_3\OnlineCaterer\src\API\OnlineCaterer.WebApi\bin\Debug\net7.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
