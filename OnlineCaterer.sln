@@ -31,11 +31,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineCaterer.Infrastructur
 		{3175C4A9-E031-4800-88D2-ECFA3D47FA8F} = {3175C4A9-E031-4800-88D2-ECFA3D47FA8F}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineCaterer.Data", "src\Infrastructure\OnlineCaterer.Data\OnlineCaterer.Data.csproj", "{13D33034-866A-4312-BF8D-DCBD2EA61997}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineCaterer.Data", "src\Infrastructure\OnlineCaterer.Data\OnlineCaterer.Data.csproj", "{13D33034-866A-4312-BF8D-DCBD2EA61997}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineCaterer.WebApi", "src\API\OnlineCaterer.WebApi\OnlineCaterer.WebApi.csproj", "{DD449A22-EED8-4E1B-A9C7-AC7961045576}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{A2FC999F-E4B7-415A-A59A-585A89F69875}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineCaterer.Web", "src\UI\OnlineCaterer.Web\OnlineCaterer.Web.csproj", "{A2FC999F-E4B7-415A-A59A-585A89F69875}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
