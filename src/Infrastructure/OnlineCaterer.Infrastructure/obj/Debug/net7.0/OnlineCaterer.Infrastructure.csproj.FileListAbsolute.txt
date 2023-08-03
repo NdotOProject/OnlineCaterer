@@ -22,3 +22,8 @@ D:\Projects\Aptech\Semester_3\OnlineCaterer\src\Infrastructure\OnlineCaterer.Inf
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\Infrastructure\OnlineCaterer.Infrastructure\obj\Debug\net7.0\refint\OnlineCaterer.Infrastructure.dll
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\Infrastructure\OnlineCaterer.Infrastructure\obj\Debug\net7.0\OnlineCaterer.Infrastructure.pdb
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\Infrastructure\OnlineCaterer.Infrastructure\obj\Debug\net7.0\ref\OnlineCaterer.Infrastructure.dll
+D:\Projects\Aptech\Semester_3\OnlineCaterer\src\Infrastructure\OnlineCaterer.Infrastructure\bin\Debug\net7.0\OnlineCaterer.Application.dll
+D:\Projects\Aptech\Semester_3\OnlineCaterer\src\Infrastructure\OnlineCaterer.Infrastructure\bin\Debug\net7.0\OnlineCaterer.Domain.dll
+D:\Projects\Aptech\Semester_3\OnlineCaterer\src\Infrastructure\OnlineCaterer.Infrastructure\bin\Debug\net7.0\OnlineCaterer.Application.pdb
+D:\Projects\Aptech\Semester_3\OnlineCaterer\src\Infrastructure\OnlineCaterer.Infrastructure\bin\Debug\net7.0\OnlineCaterer.Domain.pdb
+D:\Projects\Aptech\Semester_3\OnlineCaterer\src\Infrastructure\OnlineCaterer.Infrastructure\obj\Debug\net7.0\OnlineCaterer.Infrastructure.csproj.CopyComplete

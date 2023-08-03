@@ -3,17 +3,17 @@ using OnlineCaterer.Domain.Common;
 
 namespace OnlineCaterer.Domain.Entities;
 
-public class BookingDetails : BaseEntity
+public class BookingDetails
 {
-    [ForeignKey(nameof(Booking))]
+    //[ForeignKey(nameof(Booking))]
     public int BookingId { get; set; }
     public Booking? Booking { get; set; }
 
-    [ForeignKey(nameof(Food))]
+    //[ForeignKey(nameof(Food))]
     public int FoodId { get; set; }
     public Food? Food { get; set; }
 
-    [Required]
+    //[Required]
     public int Quantity { get; set; }
 
 }

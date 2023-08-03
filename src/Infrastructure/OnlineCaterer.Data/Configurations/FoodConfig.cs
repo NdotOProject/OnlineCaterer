@@ -1,17 +1,31 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using OnlineCaterer.Domain.Entities;
-
+﻿
 namespace OnlineCaterer.Data.Configurations;
 
 public class FoodConfig : IEntityTypeConfiguration<Food>
 {
     public void Configure(EntityTypeBuilder<Food> builder)
     {
-        builder.HasIndex(x => x.CategoryId).IsUnique();
+        builder.HasKey(f => f.FoodId);
 
-        //builder.HasKey(f => new { f.FoodId, f.CategoryId });
+        builder.HasIndex(x => x.CategoryId)
+            .IsUnique();
 
-//        builder.HasMany(f => f.BookingDetails).WithOne(bd => bd.Food).HasPrincipalKey(bd => bd.FoodId);
+        builder.HasOne(f => f.Category)
+            .WithMany(ft => ft.Foods)
+            .HasForeignKey(f => f.CategoryId)
+            .IsRequired();
+
+        builder.Property(f => f.Name)
+            .HasColumnType("nvarchar")
+            .HasMaxLength(255)
+            .IsRequired();
+
+        builder.Property(f => f.Description)
+            .HasColumnType("nvarchar(max)")
+            .HasDefaultValue("No Description");
+
+        builder.Property(f => f.Price)
+            .HasColumnType("money")
+            .IsRequired();
     }
 }

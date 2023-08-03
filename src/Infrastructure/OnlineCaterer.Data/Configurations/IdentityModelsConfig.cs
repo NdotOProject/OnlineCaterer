@@ -1,6 +1,4 @@
 ﻿
-using Microsoft.EntityFrameworkCore;
-
 namespace OnlineCaterer.Data.Configurations;
 
 public static class IdentityModelsConfig

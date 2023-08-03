@@ -1,14 +1,9 @@
 ﻿
-using OnlineCaterer.Domain.Common;
-
 namespace OnlineCaterer.Domain.Entities;
 
-public class Caterer : BaseEntity
+public class Caterer : BaseUser
 {
-    [Key]
-    public int UserId { get; set; }
-
-    public string IntroduceMessage { get; set; } = string.Empty;
+    public string? IntroduceMessage { get; set; }
 
     public ICollection<ResponseMessage> ResponseMessages { get; set; } = new HashSet<ResponseMessage>();
 

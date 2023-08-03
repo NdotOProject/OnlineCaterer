@@ -1,11 +1,7 @@
 ﻿
-using OnlineCaterer.Domain.Common;
-
 namespace OnlineCaterer.Domain.Entities;
 
-public class Customer : BaseEntity
+public class Customer : BaseUser
 {
-    [Key]
-    public int UserId { get; set; }
-
+    //
 }

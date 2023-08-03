@@ -5,22 +5,21 @@ namespace OnlineCaterer.Domain.Entities;
 
 public class Food : BaseEntity
 {
-    [Key]
+    //[Key]
     public int FoodId { get; set; }
 
-//    [Key]
-    [ForeignKey(nameof(Category))]
+    //[ForeignKey(nameof(Category))]
     public int CategoryId { get; set; }
     public FoodType? Category { get; set; }
 
-    [Required]
-    [StringLength(255)]
+    //[Required]
+    //[StringLength(255)]
     public string? Name { get; set; }
 
     public string? Description { get; set; }
 
-    [Required]
-    [DataType(DataType.Currency)]
+    //[Required]
+    //[DataType(DataType.Currency)]
     public decimal Price { get; set; }
 
     public ICollection<BookingDetails> BookingDetails { get; set; } = new HashSet<BookingDetails>();

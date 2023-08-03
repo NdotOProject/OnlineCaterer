@@ -289,6 +289,10 @@
             "Microsoft.Extensions.Options.ConfigurationExtensions": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
@@ -334,7 +338,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\Core\\OnlineCaterer.Application\\OnlineCaterer.Application.csproj": {
+                "projectPath": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\Core\\OnlineCaterer.Application\\OnlineCaterer.Application.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -346,6 +354,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
