@@ -1,6 +1,4 @@
 ﻿
-using OnlineCaterer.Domain.Common;
-
 namespace OnlineCaterer.Domain.Entities;
 
 public class FoodType : BaseEntity
@@ -11,7 +9,7 @@ public class FoodType : BaseEntity
 
     public string? Description { get; set; }
 
-    public ICollection<Caterer> Caterers { get; set; } = new HashSet<Caterer>();
+    public Caterer? Caterer { get; set; }
 
     public ICollection<Food> Foods { get; set; } = new HashSet<Food>();
 

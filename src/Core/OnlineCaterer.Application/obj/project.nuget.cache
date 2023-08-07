@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "wspYVR8RmFOdgJYr54O0wGvo5wFjR6IVwOJhYc68wu+VqoF+EKQ+RzmPWmQlo5gcp92QYmRy9DyCNhZd2kEcSQ==",
+  "dgSpecHash": "RnE1RA8dT6dHq8ZUobkRMf/k4J+7svOZcXwlCQm1JaYiFjA0XoBSfwrHVlACx4NEe11ygDGz7d2QVNkbSm5xQA==",
   "success": true,
   "projectFilePath": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\Core\\OnlineCaterer.Application\\OnlineCaterer.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\DELL\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.9\\microsoft.entityframeworkcore.7.0.9.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.9\\microsoft.entityframeworkcore.abstractions.7.0.9.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.9\\microsoft.entityframeworkcore.analyzers.7.0.9.nupkg.sha512",

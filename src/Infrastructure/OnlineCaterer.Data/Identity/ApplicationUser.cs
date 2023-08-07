@@ -1,6 +1,4 @@
 ﻿
-using Microsoft.AspNetCore.Identity;
-using OnlineCaterer.Domain.Entities;
 using System.ComponentModel.DataAnnotations;
 
 namespace OnlineCaterer.Data.Identity;

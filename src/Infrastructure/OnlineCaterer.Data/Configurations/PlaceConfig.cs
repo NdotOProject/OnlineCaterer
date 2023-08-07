@@ -1,5 +1,4 @@
 ﻿
-
 namespace OnlineCaterer.Data.Configurations;
 
 public class PlaceConfig : IEntityTypeConfiguration<Place>

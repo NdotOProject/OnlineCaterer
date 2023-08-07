@@ -1,11 +1,7 @@
 ﻿
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using OnlineCaterer.Application.Common.Interfaces;
-using OnlineCaterer.Data.Configurations;
-using OnlineCaterer.Data.Identity;
 using System.Reflection;
 
-namespace OnlineCaterer.Data;
+namespace OnlineCaterer.Data.Context;
 
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser> , IApplicationDbContext
 {

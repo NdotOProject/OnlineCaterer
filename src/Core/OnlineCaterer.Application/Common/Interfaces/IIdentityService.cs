@@ -1,6 +1,4 @@
 ﻿
-using OnlineCaterer.Application.Common.Models;
-
 namespace OnlineCaterer.Application.Common.Interfaces;
 
 public interface IIdentityService

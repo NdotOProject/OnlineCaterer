@@ -19,5 +19,10 @@ public class FoodTypeConfig : IEntityTypeConfiguration<FoodType>
             .HasColumnType("nvarchar(max)")
             .HasDefaultValue("No Description");
 
+        builder.HasMany(ft => ft.Foods)
+            .WithOne(f => f.Category)
+            .HasForeignKey(f => f.CategoryId)
+            .IsRequired();
+
     }
 }

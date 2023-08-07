@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using OnlineCaterer.Application.Common.Models;
-
+﻿
 namespace OnlineCaterer.Data.Identity;
 
 public static class IdentityResultExtensions

@@ -1,9 +1,6 @@
 ﻿
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-
-using OnlineCaterer.Application.Common.Interfaces;
 using OnlineCaterer.Domain.Common;
 
 namespace OnlineCaterer.Data.Interceptors;

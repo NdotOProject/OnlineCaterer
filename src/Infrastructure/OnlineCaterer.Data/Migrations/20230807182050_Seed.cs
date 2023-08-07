@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace OnlineCaterer.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class SeedData : Migration
+    public partial class Seed : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -92,49 +93,12 @@ namespace OnlineCaterer.Data.Migrations
                 }
             );
 
-            migrationBuilder.AlterColumn<DateTime>(
-                name: "CreatedDate",
-                table: "ResponseMessages",
-                type: "date",
-                nullable: false,
-                defaultValue: new DateTime(2023, 8, 3, 18, 3, 27, 873, DateTimeKind.Local).AddTicks(2700),
-                oldClrType: typeof(DateTime),
-                oldType: "date",
-                oldDefaultValue: new DateTime(2023, 8, 3, 12, 11, 59, 454, DateTimeKind.Local).AddTicks(974));
-
-            migrationBuilder.AlterColumn<DateTime>(
-                name: "BookingDate",
-                table: "Bookings",
-                type: "datetime2",
-                nullable: false,
-                defaultValue: new DateTime(2023, 8, 3, 18, 3, 27, 868, DateTimeKind.Local).AddTicks(9831),
-                oldClrType: typeof(DateTime),
-                oldType: "datetime2",
-                oldDefaultValue: new DateTime(2023, 8, 3, 12, 11, 59, 450, DateTimeKind.Local).AddTicks(1945));
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterColumn<DateTime>(
-                name: "CreatedDate",
-                table: "ResponseMessages",
-                type: "date",
-                nullable: false,
-                defaultValue: new DateTime(2023, 8, 3, 12, 11, 59, 454, DateTimeKind.Local).AddTicks(974),
-                oldClrType: typeof(DateTime),
-                oldType: "date",
-                oldDefaultValue: new DateTime(2023, 8, 3, 18, 3, 27, 873, DateTimeKind.Local).AddTicks(2700));
-
-            migrationBuilder.AlterColumn<DateTime>(
-                name: "BookingDate",
-                table: "Bookings",
-                type: "datetime2",
-                nullable: false,
-                defaultValue: new DateTime(2023, 8, 3, 12, 11, 59, 450, DateTimeKind.Local).AddTicks(1945),
-                oldClrType: typeof(DateTime),
-                oldType: "datetime2",
-                oldDefaultValue: new DateTime(2023, 8, 3, 18, 3, 27, 868, DateTimeKind.Local).AddTicks(9831));
+            
         }
     }
 }

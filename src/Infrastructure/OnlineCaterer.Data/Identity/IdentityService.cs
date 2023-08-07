@@ -1,9 +1,5 @@
 ﻿
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using OnlineCaterer.Application.Common.Interfaces;
-using OnlineCaterer.Application.Common.Models;
 
 namespace OnlineCaterer.Data.Identity;
 

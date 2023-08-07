@@ -1,8 +1,7 @@
 ﻿
-using Microsoft.EntityFrameworkCore;
 using OnlineCaterer.Domain.Entities;
 
-namespace OnlineCaterer.Application.Common.Interfaces;
+namespace OnlineCaterer.Application.Common.Interfaces.Data;
 
 public interface IApplicationDbContext
 {
@@ -15,6 +14,7 @@ public interface IApplicationDbContext
     public DbSet<Place> Places { get; }
     public DbSet<ResponseMessage> ResponseMessages { get; }
 
+    int SaveChanges();
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 
 }

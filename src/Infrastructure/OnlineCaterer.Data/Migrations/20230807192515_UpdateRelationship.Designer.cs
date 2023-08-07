@@ -5,15 +5,15 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using OnlineCaterer.Data;
+using OnlineCaterer.Data.Context;
 
 #nullable disable
 
 namespace OnlineCaterer.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230803110327_SeedData")]
-    partial class SeedData
+    [Migration("20230807192515_UpdateRelationship")]
+    partial class UpdateRelationship
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,21 +24,6 @@ namespace OnlineCaterer.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("CatererFoodType", b =>
-                {
-                    b.Property<string>("CaterersUserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("FoodTypesId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CaterersUserId", "FoodTypesId");
-
-                    b.HasIndex("FoodTypesId");
-
-                    b.ToTable("CatererFoodType");
-                });
 
             modelBuilder.Entity("CatererPlace", b =>
                 {
@@ -271,7 +256,7 @@ namespace OnlineCaterer.Data.Migrations
                     b.Property<DateTime>("BookingDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 3, 18, 3, 27, 868, DateTimeKind.Local).AddTicks(9831));
+                        .HasDefaultValue(new DateTime(2023, 8, 8, 2, 25, 15, 594, DateTimeKind.Local).AddTicks(6499));
 
                     b.Property<string>("CatererId")
                         .IsRequired()
@@ -421,8 +406,7 @@ namespace OnlineCaterer.Data.Migrations
 
                     b.HasKey("FoodId");
 
-                    b.HasIndex("CategoryId")
-                        .IsUnique();
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("Foods");
                 });
@@ -434,6 +418,9 @@ namespace OnlineCaterer.Data.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CatererUserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
@@ -463,6 +450,8 @@ namespace OnlineCaterer.Data.Migrations
                         .HasColumnType("nvarchar");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CatererUserId");
 
                     b.HasIndex("Name")
                         .IsUnique();
@@ -513,7 +502,7 @@ namespace OnlineCaterer.Data.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("date")
-                        .HasDefaultValue(new DateTime(2023, 8, 3, 18, 3, 27, 873, DateTimeKind.Local).AddTicks(2700));
+                        .HasDefaultValue(new DateTime(2023, 8, 8, 2, 25, 15, 597, DateTimeKind.Local).AddTicks(9709));
 
                     b.Property<string>("LastModifiedBy")
                         .IsRequired()
@@ -539,21 +528,6 @@ namespace OnlineCaterer.Data.Migrations
                     b.HasIndex("CatererId");
 
                     b.ToTable("ResponseMessages");
-                });
-
-            modelBuilder.Entity("CatererFoodType", b =>
-                {
-                    b.HasOne("OnlineCaterer.Domain.Entities.Caterer", null)
-                        .WithMany()
-                        .HasForeignKey("CaterersUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("OnlineCaterer.Domain.Entities.FoodType", null)
-                        .WithMany()
-                        .HasForeignKey("FoodTypesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("CatererPlace", b =>
@@ -660,6 +634,24 @@ namespace OnlineCaterer.Data.Migrations
                     b.Navigation("Food");
                 });
 
+            modelBuilder.Entity("OnlineCaterer.Domain.Entities.Caterer", b =>
+                {
+                    b.HasOne("OnlineCaterer.Data.Identity.ApplicationUser", null)
+                        .WithOne()
+                        .HasForeignKey("OnlineCaterer.Domain.Entities.Caterer", "UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("OnlineCaterer.Domain.Entities.Customer", b =>
+                {
+                    b.HasOne("OnlineCaterer.Data.Identity.ApplicationUser", null)
+                        .WithOne()
+                        .HasForeignKey("OnlineCaterer.Domain.Entities.Customer", "UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("OnlineCaterer.Domain.Entities.Food", b =>
                 {
                     b.HasOne("OnlineCaterer.Domain.Entities.FoodType", "Category")
@@ -669,6 +661,15 @@ namespace OnlineCaterer.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("OnlineCaterer.Domain.Entities.FoodType", b =>
+                {
+                    b.HasOne("OnlineCaterer.Domain.Entities.Caterer", "Caterer")
+                        .WithMany("FoodTypes")
+                        .HasForeignKey("CatererUserId");
+
+                    b.Navigation("Caterer");
                 });
 
             modelBuilder.Entity("OnlineCaterer.Domain.Entities.ResponseMessage", b =>
@@ -690,6 +691,8 @@ namespace OnlineCaterer.Data.Migrations
             modelBuilder.Entity("OnlineCaterer.Domain.Entities.Caterer", b =>
                 {
                     b.Navigation("Bookings");
+
+                    b.Navigation("FoodTypes");
 
                     b.Navigation("ResponseMessages");
                 });

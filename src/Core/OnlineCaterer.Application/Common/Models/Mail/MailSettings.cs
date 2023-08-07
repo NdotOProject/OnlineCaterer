@@ -1,4 +1,5 @@
-﻿namespace OnlineCaterer.Application.Common.Models.Mail;
+﻿
+namespace OnlineCaterer.Application.Common.Models.Mail;
 
 public class MailSettings
 {
@@ -7,4 +8,5 @@ public class MailSettings
     public string? Password { get; set; }
     public string? Host { get; set; }
     public int Port { get; set; }
+
 }

@@ -10,4 +10,5 @@ public class Role
     {
         return $"\"Name\": \"{Name}\", \"User\": \"{User}\"";
     }
+
 }

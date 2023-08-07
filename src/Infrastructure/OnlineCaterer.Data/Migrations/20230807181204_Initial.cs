@@ -43,24 +43,6 @@ namespace OnlineCaterer.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "FoodTypes",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true, defaultValue: "No Description"),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false),
-                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    LastModifiedBy = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_FoodTypes", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Places",
                 columns: table => new
                 {
@@ -115,6 +97,30 @@ namespace OnlineCaterer.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "FoodTypes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true, defaultValue: "No Description"),
+                    CatererUserId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FoodTypes", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_FoodTypes_Caterers_CatererUserId",
+                        column: x => x.CatererUserId,
+                        principalTable: "Caterers",
+                        principalColumn: "UserId");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ResponseMessages",
                 columns: table => new
                 {
@@ -124,7 +130,7 @@ namespace OnlineCaterer.Data.Migrations
                     Title = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false, defaultValue: "Thank You So Much!"),
                     Content = table.Column<string>(type: "nvarchar(max)", nullable: true, defaultValue: "Thank you for using our service!"),
                     ResponseDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "date", nullable: false, defaultValue: new DateTime(2023, 8, 3, 12, 11, 59, 454, DateTimeKind.Local).AddTicks(974)),
+                    CreatedDate = table.Column<DateTime>(type: "date", nullable: false, defaultValue: new DateTime(2023, 8, 8, 1, 12, 4, 123, DateTimeKind.Local).AddTicks(135)),
                     CreatedBy = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false),
                     LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     LastModifiedBy = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false)
@@ -150,7 +156,7 @@ namespace OnlineCaterer.Data.Migrations
                     CatererId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     TotalAmount = table.Column<decimal>(type: "money", nullable: false),
                     EventDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    BookingDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 8, 3, 12, 11, 59, 450, DateTimeKind.Local).AddTicks(1945))
+                    BookingDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 8, 8, 1, 12, 4, 119, DateTimeKind.Local).AddTicks(5113))
                 },
                 constraints: table =>
                 {
@@ -166,56 +172,6 @@ namespace OnlineCaterer.Data.Migrations
                         column: x => x.CustomerId,
                         principalTable: "Customers",
                         principalColumn: "UserId",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "CatererFoodType",
-                columns: table => new
-                {
-                    CaterersUserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    FoodTypesId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_CatererFoodType", x => new { x.CaterersUserId, x.FoodTypesId });
-                    table.ForeignKey(
-                        name: "FK_CatererFoodType_Caterers_CaterersUserId",
-                        column: x => x.CaterersUserId,
-                        principalTable: "Caterers",
-                        principalColumn: "UserId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_CatererFoodType_FoodTypes_FoodTypesId",
-                        column: x => x.FoodTypesId,
-                        principalTable: "FoodTypes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Foods",
-                columns: table => new
-                {
-                    FoodId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    CategoryId = table.Column<int>(type: "int", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true, defaultValue: "No Description"),
-                    Price = table.Column<decimal>(type: "money", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false),
-                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    LastModifiedBy = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Foods", x => x.FoodId);
-                    table.ForeignKey(
-                        name: "FK_Foods_FoodTypes_CategoryId",
-                        column: x => x.CategoryId,
-                        principalTable: "FoodTypes",
-                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -350,6 +306,32 @@ namespace OnlineCaterer.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Foods",
+                columns: table => new
+                {
+                    FoodId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CategoryId = table.Column<int>(type: "int", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true, defaultValue: "No Description"),
+                    Price = table.Column<decimal>(type: "money", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Foods", x => x.FoodId);
+                    table.ForeignKey(
+                        name: "FK_Foods_FoodTypes_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "FoodTypes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "BookingsDetails",
                 columns: table => new
                 {
@@ -390,11 +372,6 @@ namespace OnlineCaterer.Data.Migrations
                 column: "FoodId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CatererFoodType_FoodTypesId",
-                table: "CatererFoodType",
-                column: "FoodTypesId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_CatererPlace_PlacesId",
                 table: "CatererPlace",
                 column: "PlacesId");
@@ -404,6 +381,11 @@ namespace OnlineCaterer.Data.Migrations
                 table: "Foods",
                 column: "CategoryId",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FoodTypes_CatererUserId",
+                table: "FoodTypes",
+                column: "CatererUserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_FoodTypes_Name",
@@ -463,9 +445,6 @@ namespace OnlineCaterer.Data.Migrations
                 name: "BookingsDetails");
 
             migrationBuilder.DropTable(
-                name: "CatererFoodType");
-
-            migrationBuilder.DropTable(
                 name: "CatererPlace");
 
             migrationBuilder.DropTable(
@@ -502,13 +481,13 @@ namespace OnlineCaterer.Data.Migrations
                 name: "Users");
 
             migrationBuilder.DropTable(
-                name: "Caterers");
-
-            migrationBuilder.DropTable(
                 name: "Customers");
 
             migrationBuilder.DropTable(
                 name: "FoodTypes");
+
+            migrationBuilder.DropTable(
+                name: "Caterers");
         }
     }
 }

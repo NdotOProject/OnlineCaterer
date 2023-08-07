@@ -104,6 +104,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -257,6 +263,9 @@
             "projectReferences": {
               "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\Core\\OnlineCaterer.Application\\OnlineCaterer.Application.csproj": {
                 "projectPath": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\Core\\OnlineCaterer.Application\\OnlineCaterer.Application.csproj"
+              },
+              "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\Infrastructure\\OnlineCaterer.Data\\OnlineCaterer.Data.csproj": {
+                "projectPath": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\Infrastructure\\OnlineCaterer.Data\\OnlineCaterer.Data.csproj"
               }
             }
           }

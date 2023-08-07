@@ -1,8 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
 using Microsoft.EntityFrameworkCore.Design;
-using Microsoft.Extensions.Configuration;
 
-namespace OnlineCaterer.Data;
+namespace OnlineCaterer.Data.Context;
 
 public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
 {

@@ -1,8 +1,7 @@
 ﻿
 using Microsoft.AspNetCore.Identity;
 using OnlineCaterer.Data.Identity;
-using OnlineCaterer.Data;
-using OnlineCaterer.Application.Common.Models;
+using OnlineCaterer.Data.Context;
 
 namespace OnlineCaterer.Web;
 
@@ -50,7 +49,7 @@ public class Startup
         if (env.IsDevelopment())
         {
             app.UseMigrationsEndPoint();
-            app.InitialDatabase(Configuration);
+            app.InitialDatabase();
         }
         else
         {
