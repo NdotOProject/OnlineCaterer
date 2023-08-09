@@ -16,11 +16,12 @@ public class BookingConfig : IEntityTypeConfiguration<Booking>
             .WithMany(c => c.Bookings)
             .HasForeignKey(b => b.CatererId)
             .IsRequired();
-
+        
+        //
         builder.Property(b => b.TotalAmount)
             .HasColumnType("money")
             .IsRequired();
-
+        
         builder.Property(b => b.EventDate)
             .HasColumnType("datetime2")
             .IsRequired();

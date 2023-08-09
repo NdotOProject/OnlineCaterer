@@ -1,13 +1,12 @@
 ﻿
-using System.ComponentModel.DataAnnotations;
-
 namespace OnlineCaterer.Data.Identity;
 
 public class ApplicationUser : IdentityUser
 {
-    [Required]
-    public string? Name { get; set; }
+    public override string ToString()
+    {
+        string str = $"User[Id={Id}, UserName={UserName}, Email={Email}, PhoneNumber={PhoneNumber}, PasswordHash={PasswordHash}]";
 
-    public string? Address { get; set; }
-
+        return str;
+    }
 }

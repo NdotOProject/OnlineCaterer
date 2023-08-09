@@ -20,9 +20,45 @@ public class Startup
         services.AddOptions();
         services.AddSingleton<IConfiguration>(Configuration);
 
-        services.AddRazorPages();
+        // registor identity
+        services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
 
-        //services.Configure<List<Role>>(Configuration.GetSection("Initialization").GetSection("Roles"));
+        /*
+        services.AddDefaultIdentity<ApplicationUser>()
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+        */
+
+        services.Configure<IdentityOptions>(options =>
+        {
+            // password setting
+            options.Password.RequireDigit = false;
+            options.Password.RequireLowercase = false;
+            options.Password.RequireUppercase = false;
+            options.Password.RequireNonAlphanumeric = false;
+            options.Password.RequiredUniqueChars = 1;
+            options.Password.RequiredLength = 3;
+
+            // lockout setting
+            options.Lockout.AllowedForNewUsers = true;
+            options.Lockout.MaxFailedAccessAttempts = 5;
+            options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+
+            // user setting
+            options.User.AllowedUserNameCharacters
+                = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+            options.User.RequireUniqueEmail = true;
+
+            // login setting
+            options.SignIn.RequireConfirmedPhoneNumber = false;
+            options.SignIn.RequireConfirmedEmail = false;
+            options.SignIn.RequireConfirmedAccount = true;
+
+        });
+
         //
         services.AddApplicationServices();
         services.AddDataServices(Configuration);
@@ -30,16 +66,7 @@ public class Startup
         services.AddWebServices();
 
         //
-        /*services.AddIdentity<ApplicationUser, IdentityRole>()
-        .AddEntityFrameworkStores<ApplicationDbContext>()
-        .AddDefaultTokenProviders();*/
-
-        services.AddDefaultIdentity<ApplicationUser>()
-        .AddEntityFrameworkStores<ApplicationDbContext>()
-        .AddDefaultTokenProviders();
-
-        //
-        services.AddControllersWithViews();
+        //services.AddControllersWithViews();
 
     }
 

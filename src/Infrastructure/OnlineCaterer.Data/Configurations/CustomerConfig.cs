@@ -14,5 +14,11 @@ public class CustomerConfig : IEntityTypeConfiguration<Customer>
             .HasMaxLength(450)
             .ValueGeneratedNever();
 
+        builder.Property(c => c.Name)
+            .HasColumnType("nvarchar(500)");
+
+        builder.Property(c => c.Address)
+            .HasColumnType("nvarchar(500)");
+
     }
 }

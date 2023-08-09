@@ -1,6 +1,4 @@
 ﻿
-using OnlineCaterer.Domain.Entities;
-
 namespace OnlineCaterer.Application.Common.Interfaces.Data;
 
 public interface IApplicationDbContext

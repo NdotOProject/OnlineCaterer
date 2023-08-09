@@ -7,12 +7,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\Booking\" />
-    <Folder Include="DTOs\BookingDetails\" />
-    <Folder Include="DTOs\Users\Customer\Create\" />
+    <Folder Include="DTOs\BookingDetails\Commands\" />
+    <Folder Include="DTOs\BookingDetails\Queries\" />
+    <Folder Include="DTOs\Booking\Commands\" />
+    <Folder Include="DTOs\Booking\Queries\" />
+    <Folder Include="DTOs\ResponseMessage\Commands\Create\" />
+    <Folder Include="DTOs\ResponseMessage\Commands\Delete\" />
+    <Folder Include="DTOs\ResponseMessage\Commands\" />
+    <Folder Include="DTOs\ResponseMessage\Commands\Update\" />
+    <Folder Include="DTOs\Users\Customer\Commands\Create\" />
+    <Folder Include="DTOs\Users\Customer\Commands\Delete\" />
+    <Folder Include="DTOs\Users\Customer\Commands\Update\" />
+    <Folder Include="DTOs\Users\Customer\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.6.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
   </ItemGroup>
 

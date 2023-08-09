@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "RnE1RA8dT6dHq8ZUobkRMf/k4J+7svOZcXwlCQm1JaYiFjA0XoBSfwrHVlACx4NEe11ygDGz7d2QVNkbSm5xQA==",
+  "dgSpecHash": "IutQAm8lr1eI7DjyhqS9TLcP42vf8zRu+qZTqmoEtZZd0WGoujjJXWhK84/DuhLKZyjnpbDlJeoRczCAcGKM9g==",
   "success": true,
   "projectFilePath": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\Core\\OnlineCaterer.Application\\OnlineCaterer.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\DELL\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\fluentvalidation\\11.6.0\\fluentvalidation.11.6.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.9\\microsoft.entityframeworkcore.7.0.9.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.9\\microsoft.entityframeworkcore.abstractions.7.0.9.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.9\\microsoft.entityframeworkcore.analyzers.7.0.9.nupkg.sha512",

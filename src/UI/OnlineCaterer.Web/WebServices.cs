@@ -8,7 +8,13 @@ public static class WebServices
 {
     public static IServiceCollection AddWebServices(this IServiceCollection services)
     {
-        services.AddDatabaseDeveloperPageExceptionFilter();
+
+        services.AddRazorPages(options =>
+        {
+
+        });
+
+        //services.AddDatabaseDeveloperPageExceptionFilter();
 
         services.AddScoped<IUser, CurrentUser>();
 

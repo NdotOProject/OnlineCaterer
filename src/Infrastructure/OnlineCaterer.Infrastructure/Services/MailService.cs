@@ -1,10 +1,8 @@
 ﻿
 using MailKit.Security;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MimeKit;
-using OnlineCaterer.Application.Common.Models.Mail;
 
 namespace OnlineCaterer.Infrastructure.Services;
 
@@ -23,15 +21,20 @@ public class MailService : IEmailSender
 
     public async Task SendEmailAsync(string email, string subject, string htmlMessage)
     {
-        var message = new MimeMessage();
-        message.Sender = new MailboxAddress(_mailSettings.DisplayName, _mailSettings.Mail);
+
+        var bodyBuilder = new BodyBuilder
+        {
+            HtmlBody = htmlMessage
+        };
+
+        var message = new MimeMessage
+        {
+            Sender = new MailboxAddress(_mailSettings.DisplayName, _mailSettings.Mail),
+            Subject = subject,
+            Body = bodyBuilder.ToMessageBody()
+        };
         message.From.Add(new MailboxAddress(_mailSettings.DisplayName, _mailSettings.Mail));
         message.To.Add(MailboxAddress.Parse(email));
-        message.Subject = subject;
-
-        var builder = new BodyBuilder();
-        builder.HtmlBody = htmlMessage;
-        message.Body = builder.ToMessageBody();
 
         using var smtp = new MailKit.Net.Smtp.SmtpClient();
 
@@ -47,12 +50,12 @@ public class MailService : IEmailSender
             var emailsavefile = string.Format(@"mailssave/{0}.eml", Guid.NewGuid());
             await message.WriteToAsync(emailsavefile);
 
-            _logger.LogInformation("Lỗi gửi mail, lưu tại - " + emailsavefile);
+            _logger.LogInformation(message: $"Send error, save mail at - {emailsavefile}");
             _logger.LogError(message: ex.Message);
         }
 
         smtp.Disconnect(true);
 
-        _logger.LogInformation("send mail to " + email);
+        _logger.LogInformation("Send mail to " + email);
     }
 }

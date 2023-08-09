@@ -12,12 +12,13 @@ public class FoodTypeConfig : IEntityTypeConfiguration<FoodType>
             .HasMaxLength(100)
             .IsRequired();
 
-        builder.HasIndex(ft => ft.Name)
-            .IsUnique();
-
         builder.Property(ft => ft.Description)
             .HasColumnType("nvarchar(max)")
             .HasDefaultValue("No Description");
+
+        builder.HasOne(ft => ft.Caterer)
+            .WithMany(ft => ft.FoodTypes)
+            .HasForeignKey(ft => ft.CatererId);
 
         builder.HasMany(ft => ft.Foods)
             .WithOne(f => f.Category)

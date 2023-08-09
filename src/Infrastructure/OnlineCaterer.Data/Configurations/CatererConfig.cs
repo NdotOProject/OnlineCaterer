@@ -14,6 +14,14 @@ public class CatererConfig : IEntityTypeConfiguration<Caterer>
             .HasMaxLength(450)
             .ValueGeneratedNever();
 
+        builder.Property(c => c.Name)
+            .HasColumnType("nvarchar(500)")
+            .IsRequired();
+
+        builder.Property(c => c.Address)
+            .HasColumnType("nvarchar(500)")
+            .IsRequired();
+
         builder.Property(c => c.IntroduceMessage)
             .HasColumnType("nvarchar")
             .HasMaxLength(1000)

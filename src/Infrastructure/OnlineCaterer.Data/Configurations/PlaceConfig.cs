@@ -12,5 +12,9 @@ public class PlaceConfig : IEntityTypeConfiguration<Place>
             .HasMaxLength(500)
             .IsRequired();
 
+        builder.Property(x => x.Description)
+            .HasColumnType("nvarchar(max)")
+            .HasDefaultValue("No Description");
+
     }
 }

@@ -3,7 +3,7 @@ namespace OnlineCaterer.Domain.Entities;
 
 public class Caterer : BaseUser
 {
-    public string? IntroduceMessage { get; set; }
+    public string IntroduceMessage { get; set; }
 
     public ICollection<ResponseMessage> ResponseMessages { get; set; } = new HashSet<ResponseMessage>();
 

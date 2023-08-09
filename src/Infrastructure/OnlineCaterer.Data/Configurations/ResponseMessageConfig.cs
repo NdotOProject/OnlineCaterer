@@ -14,18 +14,16 @@ public class ResponseMessageConfig : IEntityTypeConfiguration<ResponseMessage>
 
         builder.Property(rm => rm.Title)
             .HasColumnType("nvarchar")
-            .HasMaxLength(200)
-            .HasDefaultValue("Thank You So Much!")
-            .IsRequired();
+            .HasMaxLength(500)
+            .HasDefaultValue("Thank You So Much!");
 
         builder.Property(rm => rm.Content)
             .HasColumnType("nvarchar(max)")
             .HasDefaultValue("Thank you for using our service!");
 
-        builder.Property(rm => rm.CreatedDate)
+        builder.Property(rm => rm.ResponseDate)
             .HasColumnType("date")
-            .HasDefaultValue(DateTime.Now)
-            .IsRequired();
+            .HasDefaultValue(null);
 
     }
 }

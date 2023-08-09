@@ -12,8 +12,8 @@ using OnlineCaterer.Data.Context;
 namespace OnlineCaterer.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230807182050_Seed")]
-    partial class Seed
+    [Migration("20230809164938_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -181,9 +181,6 @@ namespace OnlineCaterer.Data.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
-                    b.Property<string>("Address")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -200,10 +197,6 @@ namespace OnlineCaterer.Data.Migrations
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
@@ -256,7 +249,7 @@ namespace OnlineCaterer.Data.Migrations
                     b.Property<DateTime>("BookingDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 8, 1, 20, 50, 352, DateTimeKind.Local).AddTicks(8447));
+                        .HasDefaultValue(new DateTime(2023, 8, 9, 23, 49, 38, 56, DateTimeKind.Local).AddTicks(3173));
 
                     b.Property<string>("CatererId")
                         .IsRequired()
@@ -289,10 +282,18 @@ namespace OnlineCaterer.Data.Migrations
                     b.Property<int>("FoodId")
                         .HasColumnType("int");
 
+                    b.Property<float>("Discount")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("real")
+                        .HasDefaultValue(0f);
+
                     b.Property<int>("Quantity")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasDefaultValue(1);
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("money");
 
                     b.HasKey("BookingId", "FoodId");
 
@@ -307,8 +308,11 @@ namespace OnlineCaterer.Data.Migrations
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar");
 
-                    b.Property<string>("CreatedBy")
+                    b.Property<string>("Address")
                         .IsRequired()
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("CreatedBy")
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar");
 
@@ -316,19 +320,22 @@ namespace OnlineCaterer.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("IntroduceMessage")
+                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar")
                         .HasDefaultValue("Welcome");
 
                     b.Property<string>("LastModifiedBy")
-                        .IsRequired()
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .IsRequired()
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(500)");
 
                     b.HasKey("UserId");
 
@@ -341,8 +348,10 @@ namespace OnlineCaterer.Data.Migrations
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar");
 
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(500)");
+
                     b.Property<string>("CreatedBy")
-                        .IsRequired()
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar");
 
@@ -350,13 +359,14 @@ namespace OnlineCaterer.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("LastModifiedBy")
-                        .IsRequired()
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .IsRequired()
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(500)");
 
                     b.HasKey("UserId");
 
@@ -375,7 +385,6 @@ namespace OnlineCaterer.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CreatedBy")
-                        .IsRequired()
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar");
 
@@ -383,17 +392,21 @@ namespace OnlineCaterer.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(max)")
                         .HasDefaultValue("No Description");
 
+                    b.Property<bool>("Discontinued")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
                     b.Property<string>("LastModifiedBy")
-                        .IsRequired()
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .IsRequired()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
@@ -404,10 +417,13 @@ namespace OnlineCaterer.Data.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("money");
 
+                    b.Property<string>("QuantityPerUnit")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(40)");
+
                     b.HasKey("FoodId");
 
-                    b.HasIndex("CategoryId")
-                        .IsUnique();
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("Foods");
                 });
@@ -420,11 +436,11 @@ namespace OnlineCaterer.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("CatererUserId")
+                    b.Property<string>("CatererId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("CreatedBy")
-                        .IsRequired()
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar");
 
@@ -432,17 +448,16 @@ namespace OnlineCaterer.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(max)")
                         .HasDefaultValue("No Description");
 
                     b.Property<string>("LastModifiedBy")
-                        .IsRequired()
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .IsRequired()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
@@ -452,10 +467,7 @@ namespace OnlineCaterer.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CatererUserId");
-
-                    b.HasIndex("Name")
-                        .IsUnique();
+                    b.HasIndex("CatererId");
 
                     b.ToTable("FoodTypes");
                 });
@@ -467,6 +479,12 @@ namespace OnlineCaterer.Data.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(max)")
+                        .HasDefaultValue("No Description");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -491,36 +509,32 @@ namespace OnlineCaterer.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Content")
+                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(max)")
                         .HasDefaultValue("Thank you for using our service!");
 
                     b.Property<string>("CreatedBy")
-                        .IsRequired()
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar");
 
                     b.Property<DateTime>("CreatedDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("date")
-                        .HasDefaultValue(new DateTime(2023, 8, 8, 1, 20, 50, 356, DateTimeKind.Local).AddTicks(2331));
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("LastModifiedBy")
-                        .IsRequired()
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .IsRequired()
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("ResponseDate")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("ResponseDate")
+                        .HasColumnType("date");
 
                     b.Property<string>("Title")
                         .IsRequired()
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(200)
+                        .HasMaxLength(500)
                         .HasColumnType("nvarchar")
                         .HasDefaultValue("Thank You So Much!");
 
@@ -627,12 +641,30 @@ namespace OnlineCaterer.Data.Migrations
                     b.HasOne("OnlineCaterer.Domain.Entities.Food", "Food")
                         .WithMany("BookingDetails")
                         .HasForeignKey("FoodId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Booking");
 
                     b.Navigation("Food");
+                });
+
+            modelBuilder.Entity("OnlineCaterer.Domain.Entities.Caterer", b =>
+                {
+                    b.HasOne("OnlineCaterer.Data.Identity.ApplicationUser", null)
+                        .WithOne()
+                        .HasForeignKey("OnlineCaterer.Domain.Entities.Caterer", "UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("OnlineCaterer.Domain.Entities.Customer", b =>
+                {
+                    b.HasOne("OnlineCaterer.Data.Identity.ApplicationUser", null)
+                        .WithOne()
+                        .HasForeignKey("OnlineCaterer.Domain.Entities.Customer", "UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("OnlineCaterer.Domain.Entities.Food", b =>
@@ -650,7 +682,9 @@ namespace OnlineCaterer.Data.Migrations
                 {
                     b.HasOne("OnlineCaterer.Domain.Entities.Caterer", "Caterer")
                         .WithMany("FoodTypes")
-                        .HasForeignKey("CatererUserId");
+                        .HasForeignKey("CatererId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Caterer");
                 });

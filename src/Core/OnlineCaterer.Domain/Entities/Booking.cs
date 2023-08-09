@@ -3,13 +3,14 @@ namespace OnlineCaterer.Domain.Entities;
 
 public class Booking
 {
+    // PK
     public int BookingId { get; set; }
-
-    public string? CustomerId { get; set; }
-    public Customer? Customer { get; set; }
-
-    public string? CatererId { get; set; }
-    public Caterer? Caterer { get; set; }
+    // FK_Booking_Customer
+    public string CustomerId { get; set; }
+    public Customer Customer { get; set; }
+    // FK_Booking_Caterer
+    public string CatererId { get; set; }
+    public Caterer Caterer { get; set; }
 
     public decimal TotalAmount { get; set; }
 

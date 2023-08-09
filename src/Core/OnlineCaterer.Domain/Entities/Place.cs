@@ -5,7 +5,9 @@ public class Place
 {
     public int Id { get; set; }
 
-    public string? Name { get; set; }
+    public string Name { get; set; }
+
+    public string Description { get; set; }
 
     public ICollection<Caterer> Caterers { get; set; } = new HashSet<Caterer>();
 }
