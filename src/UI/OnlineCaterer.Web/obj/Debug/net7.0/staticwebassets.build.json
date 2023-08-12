@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "an6ah+vxMlO0uYib53W4MuVG4+c47/8/P8Bvtalq3Ug=",
+  "Hash": "YVxUhctq6wCIH+OPWARObNqQqqlJtrknd+DWlr674Vo=",
   "Source": "OnlineCaterer.Web",
   "BasePath": "_content/OnlineCaterer.Web",
   "Mode": "Default",
@@ -1309,6 +1309,40 @@
       "OriginalItemSpec": "wwwroot\\images\\cart-shopping-solid.svg"
     },
     {
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\fa_logout_icon.svg",
+      "SourceId": "OnlineCaterer.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
+      "BasePath": "_content/OnlineCaterer.Web",
+      "RelativePath": "images/fa_logout_icon.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\fa_logout_icon.svg"
+    },
+    {
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\fa_login_icon.svg",
+      "SourceId": "OnlineCaterer.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
+      "BasePath": "_content/OnlineCaterer.Web",
+      "RelativePath": "images/fa_login_icon.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\fa_login_icon.svg"
+    },
+    {
       "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\favicon.png",
       "SourceId": "OnlineCaterer.Web",
       "SourceType": "Discovered",
@@ -1360,6 +1394,23 @@
       "OriginalItemSpec": "wwwroot\\images\\magnifying-glass-solid.svg"
     },
     {
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\user-gear-solid.svg",
+      "SourceId": "OnlineCaterer.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
+      "BasePath": "_content/OnlineCaterer.Web",
+      "RelativePath": "images/user-gear-solid.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\user-gear-solid.svg"
+    },
+    {
       "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\user-solid.svg",
       "SourceId": "OnlineCaterer.Web",
       "SourceType": "Discovered",
@@ -1392,6 +1443,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\custom.js"
+    },
+    {
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\header.js",
+      "SourceId": "OnlineCaterer.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
+      "BasePath": "_content/OnlineCaterer.Web",
+      "RelativePath": "js/header.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\header.js"
     },
     {
       "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\site.js",

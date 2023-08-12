@@ -61,6 +61,14 @@
       "PackagePath": "staticwebassets\\images\\cart-shopping-solid.svg"
     },
     {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\fa_login_icon.svg",
+      "PackagePath": "staticwebassets\\images\\fa_login_icon.svg"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\fa_logout_icon.svg",
+      "PackagePath": "staticwebassets\\images\\fa_logout_icon.svg"
+    },
+    {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\favicon.png",
       "PackagePath": "staticwebassets\\images\\favicon.png"
     },
@@ -73,12 +81,20 @@
       "PackagePath": "staticwebassets\\images\\magnifying-glass-solid.svg"
     },
     {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\user-gear-solid.svg",
+      "PackagePath": "staticwebassets\\images\\user-gear-solid.svg"
+    },
+    {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\user-solid.svg",
       "PackagePath": "staticwebassets\\images\\user-solid.svg"
     },
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\custom.js",
       "PackagePath": "staticwebassets\\js\\custom.js"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\header.js",
+      "PackagePath": "staticwebassets\\js\\header.js"
     },
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\site.js",

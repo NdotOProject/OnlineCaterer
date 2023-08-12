@@ -200,11 +200,12 @@
 
 /* nav user option icon */
 .custom_nav-container
- .user_option-icon {
+.user_option-icon {
     width: 17px;
-    padding: 0;
     border: none;
+    padding: 0;
     margin: 0 10px;
+    pointer-events: auto;
 }
 
 .custom_nav-container
@@ -213,6 +214,16 @@
     width: 17px;
     height: 17px;
     fill: #fff;
+}
+
+.custom_nav-container
+ #user_options.user_option-icon
+  svg,
+.custom_nav-container
+ #search_option.user_option-icon
+  svg {
+    position: relative;
+    top: 21px;
 }
 
 .custom_nav-container
@@ -252,28 +263,114 @@
   background-color: #e69c00;
 }
 
+/* selected option content */
 .nav-user_options
- #selected_option-content {
+ .selected_option-content {
+    display: none;
+}
+
+.nav-user_options
+ .selected_option-content.show {
+    display: block;
     position: absolute;
     top: 100%;
     background-color: #ffbe33;
     width: fit-content;
+    min-width: 150px;
     height: fit-content;
     border-radius: 10px;
     padding: 15px 25px;
+    cursor: pointer;
+    z-index: 10;
+
 }
 
 .nav-user_options
- #selected_option-content::before {
-    content: "";
-    display: block;
+ .selected_option-arrow {
     height: 20px;
     width: 20px;
-    background-color: #ffbe33;
-    position: absolute;
-    top: -10px;
-    /* glass icon left 20px, 7.5%*/
-    /* user icon left 70px, 25.5% */
-    left: 7.5%;
     transform: rotate(45deg);
+}
+
+.nav-user_options
+ .selected_option-arrow.active {
+    background-color: #ffbe33;
+    position: relative;
+    top: 35px;
+    left: 8.2px;
+}
+
+/* option item */
+#user_option-list
+ .user_option-item {
+    display: block;
+    text-align: center;
+}
+
+#user_option-list
+ .user_option-item 
+  a {
+    width: 80px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#user_option-list
+ .user_option-item
+  a
+   svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    margin: 0 5px;
+}
+
+#user_option-list
+ .user_option-item:hover
+  a {
+    background-color: #fff;
+    color: #e69c00;
+    border-radius: 10px;
+}
+
+#user_option-list
+ .user_option-item:hover
+  a
+   svg {
+    fill: #e69c00;
+}
+
+#user_option-list
+ .user_option-item:hover 
+  a::before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-top: 4px solid #fff;
+    border-right: 4px solid #fff;
+    transform: rotate(45deg);
+    top: 5px;
+    left: -21px;
+}
+
+
+#user_option-list
+ .user_option-item:hover 
+  a::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-top: 4px solid #fff;
+    border-right: 4px solid #FFF;
+    transform: rotate(225deg);
+    top: 5px;
+    right: -21px;
 }
