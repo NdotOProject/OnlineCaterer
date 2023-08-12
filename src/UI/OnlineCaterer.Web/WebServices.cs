@@ -20,6 +20,12 @@ public static class WebServices
 
         services.AddHttpContextAccessor();
 
+        services.ConfigureApplicationCookie(options => {
+            //options.LoginPath = "/login/";
+            //options.LogoutPath = "/logout/";
+            //options.AccessDeniedPath = "/khongduoctruycap.html";
+        });
+
         return services;
     }
 }

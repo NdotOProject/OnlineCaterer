@@ -55,7 +55,7 @@ public class Startup
             // login setting
             options.SignIn.RequireConfirmedPhoneNumber = false;
             options.SignIn.RequireConfirmedEmail = false;
-            options.SignIn.RequireConfirmedAccount = true;
+            options.SignIn.RequireConfirmedAccount = false;
 
         });
 
@@ -66,7 +66,7 @@ public class Startup
         services.AddWebServices();
 
         //
-        //services.AddControllersWithViews();
+        services.AddControllersWithViews();
 
     }
 

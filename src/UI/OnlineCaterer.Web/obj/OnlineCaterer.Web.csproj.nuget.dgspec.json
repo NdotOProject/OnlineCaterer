@@ -364,9 +364,6 @@
               "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\Core\\OnlineCaterer.Application\\OnlineCaterer.Application.csproj": {
                 "projectPath": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\Core\\OnlineCaterer.Application\\OnlineCaterer.Application.csproj"
               },
-              "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\Infrastructure\\OnlineCaterer.Data\\OnlineCaterer.Data.csproj": {
-                "projectPath": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\Infrastructure\\OnlineCaterer.Data\\OnlineCaterer.Data.csproj"
-              },
               "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\Infrastructure\\OnlineCaterer.Infrastructure\\OnlineCaterer.Infrastructure.csproj": {
                 "projectPath": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\Infrastructure\\OnlineCaterer.Infrastructure\\OnlineCaterer.Infrastructure.csproj"
               }
@@ -383,6 +380,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
               "version": "[7.0.9, )"
@@ -401,7 +402,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[7.0.9, )"
             }
           },
           "imports": [
