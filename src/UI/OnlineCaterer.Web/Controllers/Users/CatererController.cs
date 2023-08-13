@@ -5,10 +5,12 @@ using Microsoft.AspNetCore.WebUtilities;
 using OnlineCaterer.Application.Common.Interfaces.Data;
 using OnlineCaterer.Data.Identity;
 using OnlineCaterer.Domain.Entities;
-using OnlineCaterer.Web.Models.Users;
 using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
 using System.Text.Encodings.Web;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
+using OnlineCaterer.Web.Models.Caterer;
+using OnlineCaterer.Domain.Constants;
 
 namespace OnlineCaterer.Web.Controllers.Users
 {
@@ -45,7 +47,6 @@ namespace OnlineCaterer.Web.Controllers.Users
         [HttpPost]
         public async Task<IActionResult> Register(CatererRegisterViewModel request)
         {
-
             if (ModelState.IsValid)
             {
                 ApplicationUser user = new()
@@ -58,6 +59,8 @@ namespace OnlineCaterer.Web.Controllers.Users
 
                 if (result.Succeeded)
                 {
+                    await _userManager.AddToRoleAsync(user, ConstantsRoles.Caterer);
+
                     var userId = await _userManager.GetUserIdAsync(user);
 
                     Caterer caterer = new()
@@ -96,6 +99,21 @@ namespace OnlineCaterer.Web.Controllers.Users
             }
 
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Search(string catererName)
+        {
+			List<Caterer> caterers = new();
+
+			if (catererName != null)
+            {
+				caterers = await _catererRepository.GetQueryable()
+                                .Where(c => c.Name != null && c.Name.Equals(catererName))
+                                .ToListAsync();
+			}
+
+			return View(caterers);
         }
     }
 }

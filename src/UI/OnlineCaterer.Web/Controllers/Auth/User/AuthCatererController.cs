@@ -2,7 +2,7 @@
 
 namespace OnlineCaterer.Web.Controllers.Auth.User
 {
-    public class CatererProfileController : Controller
+    public class AuthCatererController : Controller
     {
         public IActionResult Index()
         {

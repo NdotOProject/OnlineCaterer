@@ -1,5 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Identity;
 @using OnlineCaterer.Data.Identity;
+@using OnlineCaterer.Domain.Constants;
 
 @inject UserManager<ApplicationUser> UserManager
 @inject SignInManager<ApplicationUser> SignInManager
@@ -21,7 +22,7 @@
     <meta name="author" content="" />
     <link rel="shortcut icon" href="~/images/favicon.png" type="">
 
-    <title>@ViewData["Title"] - Web</title>
+    <title>@ViewData["Title"] - Online Caterer</title>
 
     @* bootstrap core css *@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -48,16 +49,21 @@
     
     <link rel="stylesheet" href="~/css/support-bootstrap.css" />
 
+    @* Layout Style *@
+    <link rel="stylesheet" href="~/css/layout/layout-style.css" />
+
     @* Header Style *@
-    <link rel="stylesheet" href="~/css/layout/header/header.css" />
-    <link rel="stylesheet" href="~/css/layout/header/user-options-style.css" />
+    <link rel="stylesheet" href="~/css/layout/header-style.css" />
+
+    @* Slider Style*@
+    <link rel="stylesheet" href="~/css/layout/slider-style.css" />
 
     @* Style *@
 
 </head>
 
-<body>
-
+<body class="@(!"Home Page".Equals(ViewData["Title"]) ? "sub_page" : string.Empty)" >
+    
     @* Header *@ 
     <div class="header_area">
         @* Header Background *@
@@ -66,88 +72,12 @@
         </div>
         @* End Header Background *@
 
-        <partial name="_HeaderPartial" />
+        <partial name="Header/_HeaderPartial" />
 
-        @* slider section *@
-        <section class="slider_section ">
-            <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="container ">
-                            <div class="row">
-                                <div class="col-md-7 col-lg-6 ">
-                                    <div class="detail-box">
-                                        <h1>
-                                            Fast Food Restaurant
-                                        </h1>
-                                        <p>
-                                            Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
-                                        </p>
-                                        <div class="btn-box">
-                                            <a href="" class="btn1">
-                                                Order Now
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item ">
-                        <div class="container ">
-                            <div class="row">
-                                <div class="col-md-7 col-lg-6 ">
-                                    <div class="detail-box">
-                                        <h1>
-                                            Fast Food Restaurant
-                                        </h1>
-                                        <p>
-                                            Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
-                                        </p>
-                                        <div class="btn-box">
-                                            <a href="" class="btn1">
-                                                Order Now
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="container ">
-                            <div class="row">
-                                <div class="col-md-7 col-lg-6 ">
-                                    <div class="detail-box">
-                                        <h1>
-                                            Fast Food Restaurant
-                                        </h1>
-                                        <p>
-                                            Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
-                                        </p>
-                                        <div class="btn-box">
-                                            <a href="" class="btn1">
-                                                Order Now
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <ol class="carousel-indicators">
-                        <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
-                        <li data-target="#customCarousel1" data-slide-to="1"></li>
-                        <li data-target="#customCarousel1" data-slide-to="2"></li>
-                    </ol>
-                </div>
-            </div>
-
-        </section>
-        @* end slider section *@
-
+        @if ("Home Page".Equals(ViewData["Title"]))
+        {
+            <partial name="_SliderPartial" />
+        }
     </div>
     @* Header *@
 
@@ -159,7 +89,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - Online Caterer - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
 

@@ -9,12 +9,16 @@
       "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
     },
     {
-      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\header\\header.css",
-      "PackagePath": "staticwebassets\\css\\layout\\header\\header.css"
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\header-style.css",
+      "PackagePath": "staticwebassets\\css\\layout\\header-style.css"
     },
     {
-      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\header\\user-options-style.css",
-      "PackagePath": "staticwebassets\\css\\layout\\header\\user-options-style.css"
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\layout-style.css",
+      "PackagePath": "staticwebassets\\css\\layout\\layout-style.css"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\slider-style.css",
+      "PackagePath": "staticwebassets\\css\\layout\\slider-style.css"
     },
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\responsive.css",
@@ -79,6 +83,10 @@
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\magnifying-glass-solid.svg",
       "PackagePath": "staticwebassets\\images\\magnifying-glass-solid.svg"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\pen-to-square-solid.svg",
+      "PackagePath": "staticwebassets\\images\\pen-to-square-solid.svg"
     },
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\user-gear-solid.svg",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YVxUhctq6wCIH+OPWARObNqQqqlJtrknd+DWlr674Vo=",
+  "Hash": "l0+C/siZMfc7aqPwUDsokZm21oyG+VJx0vxQkERpv5g=",
   "Source": "OnlineCaterer.Web",
   "BasePath": "_content/OnlineCaterer.Web",
   "Mode": "Default",
@@ -1088,12 +1088,12 @@
       "OriginalItemSpec": "wwwroot\\css\\font-awesome.min.css"
     },
     {
-      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\header\\header.css",
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\header-style.css",
       "SourceId": "OnlineCaterer.Web",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
       "BasePath": "_content/OnlineCaterer.Web",
-      "RelativePath": "css/layout/header/header.css",
+      "RelativePath": "css/layout/header-style.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1102,15 +1102,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\layout\\header\\header.css"
+      "OriginalItemSpec": "wwwroot\\css\\layout\\header-style.css"
     },
     {
-      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\header\\user-options-style.css",
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\layout-style.css",
       "SourceId": "OnlineCaterer.Web",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
       "BasePath": "_content/OnlineCaterer.Web",
-      "RelativePath": "css/layout/header/user-options-style.css",
+      "RelativePath": "css/layout/layout-style.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1119,7 +1119,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\layout\\header\\user-options-style.css"
+      "OriginalItemSpec": "wwwroot\\css\\layout\\layout-style.css"
+    },
+    {
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\slider-style.css",
+      "SourceId": "OnlineCaterer.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
+      "BasePath": "_content/OnlineCaterer.Web",
+      "RelativePath": "css/layout/slider-style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\layout\\slider-style.css"
     },
     {
       "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\responsive.css",
@@ -1392,6 +1409,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\magnifying-glass-solid.svg"
+    },
+    {
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\pen-to-square-solid.svg",
+      "SourceId": "OnlineCaterer.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
+      "BasePath": "_content/OnlineCaterer.Web",
+      "RelativePath": "images/pen-to-square-solid.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\pen-to-square-solid.svg"
     },
     {
       "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\user-gear-solid.svg",

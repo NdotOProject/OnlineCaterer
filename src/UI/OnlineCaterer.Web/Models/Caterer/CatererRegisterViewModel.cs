@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace OnlineCaterer.Web.Models.Users;
+namespace OnlineCaterer.Web.Models.Caterer;
 
 public class CatererRegisterViewModel
 {
