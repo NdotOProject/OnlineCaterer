@@ -338,13 +338,14 @@ svg {
     #user_option-list
     .user_option-item
     a {
-        width: 80px;
+        width: auto;
         color: #fff;
         text-decoration: none;
         position: relative;
         display: inline-flex;
         justify-content: center;
         align-items: center;
+        padding: 5px;
     }
 
         #user_option-list
@@ -355,6 +356,8 @@ svg {
             height: 20px;
             fill: #fff;
             margin: 0 5px;
+            position: relative;
+            left: -5px;
         }
 
     #user_option-list
@@ -383,8 +386,8 @@ svg {
             border-top: 4px solid #fff;
             border-right: 4px solid #fff;
             transform: rotate(45deg);
-            top: 5px;
-            left: -21px;
+            top: 10px;
+            left: -20px;
         }
 
 
@@ -399,8 +402,8 @@ svg {
             border-top: 4px solid #fff;
             border-right: 4px solid #FFF;
             transform: rotate(225deg);
-            top: 5px;
-            right: -21px;
+            top: 10px;
+            right: -20px;
         }
 
 /* search form */

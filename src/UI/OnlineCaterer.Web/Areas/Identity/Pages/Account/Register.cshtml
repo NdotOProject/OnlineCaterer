@@ -6,33 +6,38 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<a asp-controller="Caterer" asp-action="Register">Register for Caterer </a>
-
+<a asp-page="/Caterer/CatererRegister">
+    Register for Caterer
+</a>
 
 <div class="row">
     <div class="col-md-4">
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h2>Create a new account.</h2>
+            @*<h2>Create a new account.</h2>*@
             <hr />
+
             <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            
             <div class="form-floating mb-3">
-                <input asp-for="Input.Email"
+                <input asp-for="Input.UserName"
                     class="form-control" autocomplete="username"
-                    aria-required="true" placeholder="name@example.com" />
-                <label asp-for="Input.Email">
-                    Email
+                    aria-required="true" placeholder="Enter your username" />
+                <label asp-for="Input.UserName">
+                    Username
                 </label>
-                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                <span asp-validation-for="Input.UserName" class="text-danger"></span>
             </div>
+            
             <div class="form-floating mb-3">
                 <input asp-for="Input.Password"
                     class="form-control" autocomplete="new-password"
-                    aria-required="true" placeholder="password" />
+                    aria-required="true" placeholder="Enter your password" />
                 <label asp-for="Input.Password">
                     Password
                 </label>
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
+            
             <div class="form-floating mb-3">
                 <input asp-for="Input.ConfirmPassword"
                     class="form-control" autocomplete="new-password"
@@ -46,7 +51,7 @@
         </form>
     </div>
     <div class="col-md-6 col-md-offset-2">
-        <section>
+        @*<section>
             <h3>Use another service to register.</h3>
             <hr />
             @{
@@ -73,10 +78,11 @@
                     </form>
                 }
             }
-        </section>
+        </section>*@
     </div>
 </div>
-
+@*
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+*@

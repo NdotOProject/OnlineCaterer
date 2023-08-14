@@ -32,6 +32,7 @@ public class Startup
                 .AddDefaultTokenProviders();
         */
 
+        // Identity config
         services.Configure<IdentityOptions>(options =>
         {
             // password setting
@@ -40,7 +41,7 @@ public class Startup
             options.Password.RequireUppercase = false;
             options.Password.RequireNonAlphanumeric = false;
             options.Password.RequiredUniqueChars = 1;
-            options.Password.RequiredLength = 3;
+            options.Password.RequiredLength = 3; // password has min lengh equal to 3
 
             // lockout setting
             options.Lockout.AllowedForNewUsers = true;
@@ -50,7 +51,7 @@ public class Startup
             // user setting
             options.User.AllowedUserNameCharacters
                 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
-            options.User.RequireUniqueEmail = true;
+            options.User.RequireUniqueEmail = false;
 
             // login setting
             options.SignIn.RequireConfirmedPhoneNumber = false;

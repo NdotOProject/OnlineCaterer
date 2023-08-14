@@ -11,7 +11,7 @@ public static class WebServices
 
         services.AddRazorPages(options =>
         {
-
+            options.RootDirectory = "/Views";
         });
 
         //services.AddDatabaseDeveloperPageExceptionFilter();
