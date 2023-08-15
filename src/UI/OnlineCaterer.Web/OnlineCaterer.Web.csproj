@@ -24,6 +24,8 @@
 
   <ItemGroup>
     <Folder Include="mailssave\" />
+    <Folder Include="Views\FoodType\" />
+    <Folder Include="Views\Place\" />
     <Folder Include="wwwroot\lib\bootstrap\" />
     <Folder Include="wwwroot\lib\bootstrap\dist\js\" />
     <Folder Include="wwwroot\lib\jquery-validation-unobtrusive\" />

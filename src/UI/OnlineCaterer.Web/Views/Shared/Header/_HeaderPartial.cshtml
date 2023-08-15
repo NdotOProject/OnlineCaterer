@@ -1,5 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Identity;
 @using OnlineCaterer.Data.Identity;
+@using OnlineCaterer.Domain.Constants;
 
 @inject UserManager<ApplicationUser> UserManager
 @inject SignInManager<ApplicationUser> SignInManager
@@ -54,20 +55,31 @@
 
 					@* Caterer Option *@
 					<li class="nav-item">
-						<a class="nav-link" asp-controller="Home" asp-action="Index">Caterers</a>
+						<a asp-page="/Caterer/Index"
+							class="nav-link">
+							Caterers
+						</a>
 					</li>
 					@* End Caterer Option *@
 
 					@* About Option *@
 					<li class="nav-item">
-						<a class="nav-link" asp-controller="Home" asp-action="Index">About</a>
+						<a asp-page="/Home/About" class="nav-link">
+							About
+						</a>
 					</li>
 					@* End About Option *@
 
 					@* Booking Option *@
-					<li class="nav-item">
-						<a class="nav-link" asp-controller="Booking" asp-action="Index">Booking</a>
-					</li>
+					@if (SignInManager.IsSignedIn(User))
+					{
+						<li class="nav-item">
+							<a asp-page="/Auth/Booking/Index"
+						   class="nav-link">
+								Booking
+							</a>
+						</li>
+					}
 					@* End Booking Option *@
 
 				</ul>
@@ -235,7 +247,7 @@
 								</button>
 
 							</form>
-							<a asp-controller="" asp-action=""
+							<a asp-page="/Home/SearchPage"
 								class="form-link" >More Options...</a>
 						</div>
 						@* End Search Form *@

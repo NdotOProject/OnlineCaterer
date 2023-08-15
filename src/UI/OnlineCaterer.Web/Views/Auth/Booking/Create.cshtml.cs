@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace OnlineCaterer.Web.Views.Auth.Booking
 {
-    public class CreateModel : PageModel
+    public class CreateBookingModel : PageModel
     {
         public void OnGet()
         {

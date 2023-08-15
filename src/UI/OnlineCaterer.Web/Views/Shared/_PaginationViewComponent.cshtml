@@ -1,0 +1,70 @@
+﻿@model OnlineCaterer.Web.Views.Shared.PaginationViewComponent
+
+@{
+	Dictionary<int, string?>? pageItems = null;
+
+	if (pageItems == null)
+	{
+		pageItems = Model.CreateFromRange();
+	}
+}
+
+<ul>
+	@if (Model.Previous())
+	{
+		<li>
+			<a href="@Model.GeneratedUrl">
+				Previous
+			</a>
+		</li>
+	}
+	else
+	{
+		<li>
+			<a href="#" tabindex="-1" aria-disabled="true">
+				Previous
+			</a>
+		</li>
+	}
+
+	@foreach(var pageItem in pageItems)
+	{
+		if (pageItem.Key != Model.CurrentPage)
+		{
+			<li>
+				<a href="@pageItem.Value">
+					@pageItem.Key
+				</a>
+			</li>
+		}
+		else
+		{
+			<li>
+				<a href="#">
+					@pageItem.Key
+					<span class="sr-only">
+						(current)
+					</span>
+				</a>
+			</li>
+		}
+	}
+
+	@if (Model.Next())
+	{
+		<li>
+			<a href="@Model.GeneratedUrl">
+				Next
+			</a>
+		</li>
+	}
+	else
+	{
+		<li>
+			<a href="#" tabindex="-1" aria-disabled="true">
+				Next
+			</a>
+		</li>
+	}
+
+</ul>

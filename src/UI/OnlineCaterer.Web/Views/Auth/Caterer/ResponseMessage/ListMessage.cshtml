@@ -1,0 +1,9 @@
+﻿@page "/caterer/message/manager/"
+@model OnlineCaterer.Web.Views.Auth.Caterer.ResponseMessage.ListMessageModel
+@{
+}
+
+@foreach(var message in Model.ResponseMessages.Items)
+{
+	@message.Content
+}
