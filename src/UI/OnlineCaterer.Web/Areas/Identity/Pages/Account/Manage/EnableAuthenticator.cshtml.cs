@@ -99,8 +99,12 @@ namespace OnlineCaterer.Web.Areas.Identity.Pages.Account.Manage
             if (await _userManager.CountRecoveryCodesAsync(user) == 0)
             {
                 var recoveryCodes = await _userManager.GenerateNewTwoFactorRecoveryCodesAsync(user, 10);
-                RecoveryCodes = recoveryCodes.ToArray();
-                return RedirectToPage("./ShowRecoveryCodes");
+                if (recoveryCodes != null)
+                {
+					RecoveryCodes = recoveryCodes.ToArray();
+					return RedirectToPage("./ShowRecoveryCodes");
+				}
+                return Page();
             }
             else
             {
@@ -118,13 +122,16 @@ namespace OnlineCaterer.Web.Areas.Identity.Pages.Account.Manage
                 unformattedKey = await _userManager.GetAuthenticatorKeyAsync(user);
             }
 
-            SharedKey = FormatKey(unformattedKey);
-
-            var email = await _userManager.GetEmailAsync(user);
-            AuthenticatorUri = GenerateQrCodeUri(email, unformattedKey);
+			var email = await _userManager.GetEmailAsync(user);
+			
+            if (unformattedKey != null && email != null)
+            {
+				SharedKey = FormatKey(unformattedKey);
+				AuthenticatorUri = GenerateQrCodeUri(email, unformattedKey);
+			}
         }
 
-        private string FormatKey(string unformattedKey)
+        private static string FormatKey(string unformattedKey)
         {
             var result = new StringBuilder();
             int currentPosition = 0;

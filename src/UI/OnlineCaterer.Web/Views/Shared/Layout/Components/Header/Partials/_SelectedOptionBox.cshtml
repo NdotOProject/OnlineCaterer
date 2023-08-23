@@ -1,0 +1,77 @@
+@using Microsoft.AspNetCore.Identity
+@using OnlineCaterer.Data.Identity;
+
+@inject SignInManager<ApplicationUser> SignInManager
+
+@* User Options *@
+<ul id="user_option-list" class="selected_option-content">
+
+    @if (SignInManager.IsSignedIn(User))
+    {
+        @* Profile *@
+        <li class="user_option-item">
+            <a id="manage" title="Manage" asp-area="Identity" asp-page="/Account/Manage/Index">
+                <partial name="Icons/fa-profile-icon" />
+                <span>
+                    Profile
+                </span>
+            </a>
+        </li>
+        @* End Profile *@
+
+        @* Logout *@
+        <li class="user_option-item">
+            <form id="logoutForm" class="form-inline"
+                  asp-area="Identity" asp-page="/Account/Logout"
+                  asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button id="logout" type="submit">
+                    <partial name="Icons/fa-logout-icon" />
+                    <span>
+                        Logout
+                    </span>
+                </button>
+            </form>
+        </li>
+        @* End Logout *@
+    }
+    else
+    {
+        @* Register *@
+        <li class="user_option-item">
+            <a id="register" asp-area="Identity" asp-page="/Account/Register">
+                <partial name="Icons/fa-register-icon" />
+                <span>
+                    Register
+                </span>
+            </a>
+        </li>
+        @* End Register *@
+
+        @* Login *@
+        <li class="user_option-item">
+            <a id="login" asp-area="Identity" asp-page="/Account/Login">
+                <partial name="Icons/fa-login-icon" />
+                <span>
+                    Login
+                </span>
+            </a>
+        </li>
+        @* End Login *@
+    }
+
+</ul>
+@* End User Options *@
+
+@* Search Form *@
+<div id="search_form" class="selected_option-content">
+    <form asp-page="/Home/SearchPage" method="post">
+        <input class="search_input" type="text" placeholder="Enter supplier's name" />
+        <button type="submit" class="nav_search-btn">
+            <partial name="Icons/fa-search-icon"/>
+        </button>
+    </form>
+    <a asp-page="/Home/SearchPage" class="form-link" >
+        More Options...
+    </a>
+</div>
+@* End Search Form *@

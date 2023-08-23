@@ -5,8 +5,14 @@ namespace OnlineCaterer.Web.Views.Home
 {
     public class SearchPageModel : PageModel
     {
-        public void OnGet()
+        public IActionResult OnGet()
         {
+            return Page();
+        }
+
+        public IActionResult OnPost()
+        {
+            return Page();
         }
     }
 }

@@ -1,10 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc;
+using OnlineCaterer.Domain.Constants;
 
 namespace OnlineCaterer.Web.Views.Shared
 {
+	[NonViewComponent]
 	public class PaginationViewComponent : PageModel
 	{
+		private const int DEFAULT_RANGE_SIZE = 1;
 
 		private const int MAX_RANGE_SIZE = 5;
 
@@ -17,30 +20,35 @@ namespace OnlineCaterer.Web.Views.Shared
 
 		private List<int> MakeRange()
 		{
-			List<int> range;
-			if (TotalPages < MAX_RANGE_SIZE)
+			List<int> range = new() { DEFAULT_RANGE_SIZE };
+			
+			if (TotalPages >= DEFAULT_RANGE_SIZE)
 			{
-				range= new List<int>(TotalPages);
-			}
-			else
-			{
-				range = new List<int>(MAX_RANGE_SIZE);
-			}
-
-			range.Add(CurrentPage);
-
-			for (int i = 1; range.Count < range.Capacity; i++)
-			{
-				if (CurrentPage + i <= TotalPages)
+				if (TotalPages < MAX_RANGE_SIZE)
 				{
-					range.Add(CurrentPage + i);
+					range = new List<int>(TotalPages);
+				}
+				else
+				{
+					range = new List<int>(MAX_RANGE_SIZE);
 				}
 
-				if (CurrentPage - i >= 1)
+				range.Add(CurrentPage);
+
+				for (int i = 1; range.Count < range.Capacity; i++)
 				{
-					range.Insert(0, CurrentPage - i);
+					if (CurrentPage + i <= TotalPages)
+					{
+						range.Add(CurrentPage + i);
+					}
+
+					if (CurrentPage - i >= 1)
+					{
+						range.Insert(0, CurrentPage - i);
+					}
 				}
 			}
+			
 			return range;
 		}
 
@@ -89,7 +97,7 @@ namespace OnlineCaterer.Web.Views.Shared
 
 		public string? CreateUrl(int page)
 		{
-			return GeneratedUrl = _urlHelper.Page(PageName, new { p = page });
+			return GeneratedUrl = PaginationQuery.MakeUrl(_urlHelper.Page(PageName), page);
 		}
 
 		public Dictionary<int, string?> CreateFromRange()
@@ -101,6 +109,11 @@ namespace OnlineCaterer.Web.Views.Shared
 			}
 
 			return result;
+		}
+
+		public bool IsCurrentPage(KeyValuePair<int, string?> page)
+		{
+			return page.Key == CurrentPage;
 		}
 
 	}

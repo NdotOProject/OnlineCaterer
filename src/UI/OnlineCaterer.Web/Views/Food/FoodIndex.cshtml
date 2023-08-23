@@ -1,0 +1,51 @@
+﻿@page "/category/{categoryId:int?}/"
+@using OnlineCaterer.Web.Views.Shared;
+@using OnlineCaterer.Web.Views.Shared.Components.FoodBox;
+@inject IRepository<FoodType> FoodTypeRepository
+@model FoodIndexModel
+
+@{
+	var foods = Model.Foods;
+}
+
+<div class="row">
+	<div class="col-4">
+		@await Component.InvokeAsync("FoodTypeList", FoodTypeRepository)
+	</div>
+
+	<div class="col-8">
+		@if (!foods.Items.Any())
+		{
+			<div>
+				<span>
+					No Content
+				</span>
+			</div>
+		}
+		else
+		{
+			@foreach (var food in foods.Items)
+			{
+				@await Component.InvokeAsync(
+					"FoodBox",
+					new FoodBox.DataHolder
+					{
+						Food = food,
+						ReturnUrl = Request.Path
+					}
+				)
+			}
+		}
+
+
+		@{
+			var generateUrl = new PaginationViewComponent(Url)
+			{
+				PageName = "/Food/FoodIndex",
+				CurrentPage = Model.CurrentPage ?? 1,
+				TotalPages = foods.TotalPages,
+			};
+		}
+		<partial name="_PaginationViewComponent" model="@generateUrl" />
+	</div>
+</div>

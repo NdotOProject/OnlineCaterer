@@ -1,0 +1,14 @@
+﻿@using OnlineCaterer.Web.Views.Shared.Components.FoodBox;
+@model FoodBox.DataHolder
+
+<span>
+	@Model.Food.Name
+</span>
+
+@*.Page("/Food/FoodIndex", new { foodId = Model.FoodId })"*@
+<a asp-page="/Food/FoodDetails"
+	asp-route-foodId="@Model.Food.FoodId"
+    asp-route-returnUrl="@Model.ReturnUrl"
+	class="">
+	Details
+</a>

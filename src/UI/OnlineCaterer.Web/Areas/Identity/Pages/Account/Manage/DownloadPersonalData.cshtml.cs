@@ -50,10 +50,17 @@ namespace OnlineCaterer.Web.Areas.Identity.Pages.Account.Manage
                 personalData.Add($"{l.LoginProvider} external login provider key", l.ProviderKey);
             }
 
-            personalData.Add($"Authenticator Key", await _userManager.GetAuthenticatorKeyAsync(user));
+            string? key = await _userManager.GetAuthenticatorKeyAsync(user);
 
-            Response.Headers.Add("Content-Disposition", "attachment; filename=PersonalData.json");
-            return new FileContentResult(JsonSerializer.SerializeToUtf8Bytes(personalData), "application/json");
-        }
+            if (key != null)
+            {
+				personalData.Add($"Authenticator Key", key);
+				Response.Headers.Add("Content-Disposition", "attachment; filename=PersonalData.json");
+
+				return new FileContentResult(JsonSerializer.SerializeToUtf8Bytes(personalData), "application/json");
+			}
+
+            return Page();
+		}
     }
 }

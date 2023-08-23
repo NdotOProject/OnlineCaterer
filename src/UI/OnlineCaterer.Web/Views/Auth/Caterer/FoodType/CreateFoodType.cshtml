@@ -1,0 +1,45 @@
+﻿@page "/category/create/"
+@model OnlineCaterer.Web.Views.FoodType.CreateFoodTypeModel
+@{
+}
+
+<form asp-route="" method="post">
+
+	<div>
+		<input asp-for="Input.Name"
+			autocomplete="name" aria-required="true"
+			placeholder="Enter category name"
+			class="form-control" />
+
+		<label asp-for="Input.Name" class="form-label">
+			Category Name
+		</label>
+
+		<span asp-validation-for="Input.Name"
+			class="text-danger">
+		</span>
+
+	</div>
+
+	<div>
+		<input asp-for="Input.Description"
+			   autocomplete="description" placeholder="Enter category description"
+			   class="form-control" />
+
+		<label asp-for="Input.Description" class="form-label">
+			Category Description
+		</label>
+
+		<span asp-validation-for="Input.Description"
+			  class="text-danger">
+		</span>
+
+	</div>
+
+	<div>
+		<button type="submit" class="w-100 btn btn-lg btn-primary">
+			Create
+		</button>
+	</div>
+
+</form>

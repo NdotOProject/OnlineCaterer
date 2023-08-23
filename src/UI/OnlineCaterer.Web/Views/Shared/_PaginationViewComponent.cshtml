@@ -9,62 +9,53 @@
 	}
 }
 
-<ul>
-	@if (Model.Previous())
-	{
-		<li>
-			<a href="@Model.GeneratedUrl">
-				Previous
-			</a>
-		</li>
-	}
-	else
-	{
-		<li>
-			<a href="#" tabindex="-1" aria-disabled="true">
-				Previous
-			</a>
-		</li>
-	}
+<ul class="">
+	<li class="">
+		<a class=""
+		   @if (!Model.Previous())
+		   {
+		   @Html.Raw("href=\"#\"")
+		   @Html.Raw("tabindex=\"-1\"")
+		   @Html.Raw("aria-disabled=\"true\"")
+		   }
+		   else
+		   {
+		   @Html.Raw($"href=\"{Model.GeneratedUrl}\"")
+		   } >
+			Prev
+		</a>
+	</li>
 
 	@foreach(var pageItem in pageItems)
 	{
-		if (pageItem.Key != Model.CurrentPage)
-		{
-			<li>
-				<a href="@pageItem.Value">
-					@pageItem.Key
-				</a>
-			</li>
-		}
-		else
-		{
-			<li>
-				<a href="#">
-					@pageItem.Key
+		<li class="">
+			<a class=""
+				href="@(Model.IsCurrentPage(pageItem) ? "#" : pageItem.Value)">
+				@pageItem.Key
+				@if (Model.IsCurrentPage(pageItem))
+				{
 					<span class="sr-only">
 						(current)
 					</span>
-				</a>
-			</li>
-		}
+				}
+			</a>
+		</li>
 	}
 
-	@if (Model.Next())
-	{
-		<li>
-			<a href="@Model.GeneratedUrl">
-				Next
-			</a>
-		</li>
-	}
-	else
-	{
-		<li>
-			<a href="#" tabindex="-1" aria-disabled="true">
-				Next
-			</a>
-		</li>
-	}
+	<li class="">
+		<a class=""
+		   @if (!Model.Next())
+		   {
+		   @Html.Raw("href=\"#\"")
+		   @Html.Raw("tabindex=\"-1\"")
+		   @Html.Raw("aria-disabled=\"true\"")
+		   }
+		   else
+		   {
+		   @Html.Raw($"href=\"{Model.GeneratedUrl}\"")
+		   } >
+			Next
+		</a>
+	</li>
 
 </ul>

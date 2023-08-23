@@ -29,15 +29,6 @@ D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\Web\obj\Debug\net7.0\refint\O
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\Web\obj\Debug\net7.0\OnlineCaterer.Web.pdb
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\Web\obj\Debug\net7.0\OnlineCaterer.Web.genruntimeconfig.cache
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\Web\obj\Debug\net7.0\ref\OnlineCaterer.Web.dll
-D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.csproj.AssemblyReference.cache
-D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.GeneratedMSBuildEditorConfig.editorconfig
-D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.AssemblyInfoInputs.cache
-D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.AssemblyInfo.cs
-D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.csproj.CoreCompileInputs.cache
-D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.MvcApplicationPartsAssemblyInfo.cs
-D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.MvcApplicationPartsAssemblyInfo.cache
-D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.RazorAssemblyInfo.cache
-D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.RazorAssemblyInfo.cs
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\appsettings.Development.json
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\appsettings.json
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\bundleconfig.json
@@ -52,7 +43,6 @@ D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\n
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\Azure.Core.dll
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\Azure.Identity.dll
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
-D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\FluentValidation.dll
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\Humanizer.dll
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\MailKit.dll
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\MediatR.dll
@@ -295,6 +285,15 @@ D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\n
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\OnlineCaterer.Infrastructure.pdb
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\OnlineCaterer.Data.pdb
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\OnlineCaterer.Domain.pdb
+D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.csproj.AssemblyReference.cache
+D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.AssemblyInfoInputs.cache
+D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.AssemblyInfo.cs
+D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.csproj.CoreCompileInputs.cache
+D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.MvcApplicationPartsAssemblyInfo.cs
+D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.MvcApplicationPartsAssemblyInfo.cache
+D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.RazorAssemblyInfo.cache
+D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.RazorAssemblyInfo.cs
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\staticwebassets\msbuild.OnlineCaterer.Web.Microsoft.AspNetCore.StaticWebAssets.props
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\staticwebassets\msbuild.build.OnlineCaterer.Web.props
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.OnlineCaterer.Web.props
@@ -302,7 +301,6 @@ D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\n
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\staticwebassets.pack.json
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\staticwebassets.build.json
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\staticwebassets.development.json
-D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\scopedcss\bundle\OnlineCaterer.Web.styles.css
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\scopedcss\projectbundle\OnlineCaterer.Web.bundle.scp.css
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.csproj.CopyComplete
@@ -311,3 +309,4 @@ D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\n
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.pdb
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.genruntimeconfig.cache
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\ref\OnlineCaterer.Web.dll
+D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\scopedcss\Views\Shared\Layout\_Layout.cshtml.rz.scp.css

@@ -1,6 +1,13 @@
-﻿@page
+﻿@page "/booking/list/"
 @model OnlineCaterer.Web.Views.Auth.Booking.BookingIndexModel
-@{
-}
 
 <h1>Booking List</h1>
+
+@foreach(var booking in Model.BookingList.Items){
+	@booking.OrderBy
+	@booking.SupplyBy
+	<a asp-page="./BookingDetails"
+		asp-route-bookingId="@booking.BookingId">
+		Details
+	</a>
+}

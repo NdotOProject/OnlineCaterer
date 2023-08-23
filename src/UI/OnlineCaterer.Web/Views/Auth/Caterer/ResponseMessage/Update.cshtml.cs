@@ -1,9 +1,12 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using OnlineCaterer.Domain.Constants;
 
 namespace OnlineCaterer.Web.Views.Auth.Caterer.ResponseMessage
 {
-    public class UpdateModel : PageModel
+	[Authorize(Roles = ConstantsRoles.Caterer)]
+	public class UpdateModel : PageModel
     {
         public void OnGet()
         {

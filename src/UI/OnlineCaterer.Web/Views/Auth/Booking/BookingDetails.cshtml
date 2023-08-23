@@ -1,4 +1,25 @@
-﻿@page
+﻿@page "/booking/{bookingId:int}/details/"
 @model OnlineCaterer.Web.Views.Auth.Booking.BookingDetailsModel
 @{
+}
+
+<a asp-page="./Index">
+	Back
+</a>
+
+@Model.BookingInfo.OrderBy
+
+@foreach (var bookingDetails in Model.Details.Items)
+{
+	<div>
+		@bookingDetails.Food.Name
+	</div>
+
+	<div>
+		<a asp-page="/Food/FoodDetails"
+			asp-route-foodId="@bookingDetails.Food.FoodId"
+			asp-route-returnUrl="@Request.Path">
+			Food Details
+		</a>
+	</div>
 }

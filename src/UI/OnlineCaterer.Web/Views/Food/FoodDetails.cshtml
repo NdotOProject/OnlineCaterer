@@ -1,0 +1,29 @@
+﻿@page "/food/{foodId:int}/details/"
+@model FoodDetailsModel
+@{
+}
+
+<a href="@Model.ReturnUrl">
+	Back
+</a>
+
+<h2>Product Information</h2>
+
+<div>
+	<label>Name</label>
+	<div>@Model.FoodDetails.Name</div>
+</div>
+
+<div>
+	<div>
+
+		<div>
+			<span>
+				Supply By
+			</span>
+			@Model.FoodDetails.Caterers
+		</div>
+		
+	</div>
+
+</div>

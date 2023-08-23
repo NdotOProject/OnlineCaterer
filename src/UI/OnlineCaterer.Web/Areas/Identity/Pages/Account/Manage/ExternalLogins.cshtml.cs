@@ -45,7 +45,7 @@ namespace OnlineCaterer.Web.Areas.Identity.Pages.Account.Manage
                 .Where(auth => CurrentLogins.All(ul => auth.Name != ul.LoginProvider))
                 .ToList();
 
-            string passwordHash = null;
+            string? passwordHash = null;
             if (_userStore is IUserPasswordStore<ApplicationUser> userPasswordStore)
             {
                 passwordHash = await userPasswordStore.GetPasswordHashAsync(user, HttpContext.RequestAborted);

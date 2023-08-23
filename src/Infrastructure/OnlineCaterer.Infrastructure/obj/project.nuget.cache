@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "67JVmORaifqeD7/o8Eu7GeT2LUge+rD9Cq+yLpFGxdQG3Myeo6XIFfpNg3lVHEm6D5ioTkG7uOqfozACLhP9dg==",
+  "dgSpecHash": "RFIbStRfuYqP8X3WauHokuMVWrhbbY5h5AL2NSGRZw8qYEWrfhWpLeXXRtuzIb3SPcGXZG3N+xck43whNwXwiw==",
   "success": true,
   "projectFilePath": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\Infrastructure\\OnlineCaterer.Infrastructure\\OnlineCaterer.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,6 @@
     "C:\\Users\\DELL\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\fluentvalidation\\11.6.0\\fluentvalidation.11.6.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\mailkit\\4.1.0\\mailkit.4.1.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

@@ -1,0 +1,25 @@
+﻿@using OnlineCaterer.Domain.Constants;
+@using static OnlineCaterer.Web.Views.Shared.Components.CategoryList.FoodTypeList;
+@model List<FoodTypeListViewModel>
+
+<ul class="">
+	<li class="">
+		<a asp-page="/Food/FoodIndex"
+		   asp-route-categoryId=""
+		   class="">
+			All
+		</a>
+	</li>
+
+	@foreach (var foodType in Model)
+	{
+		<li class="">
+			<a asp-page="/Food/FoodIndex"
+		   asp-route-categoryId="@foodType.Id"
+		   class="">
+				@foodType.Name
+			</a>
+		</li>
+	}
+</ul>
+

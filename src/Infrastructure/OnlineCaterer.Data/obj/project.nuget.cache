@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Y/xJ1+qvoWDDfRYNaTroEvQlH2EtuKS1NnBnafK/uJsQLfHSwfo8pSFrR00aFN1TAsJHmukYNYSajH5Mr47Zww==",
+  "dgSpecHash": "Al5S8gvFX3M/ct7ccO5SRMlAlPSJWmVBz8izGigD4hoyzd3DXXdbuFlgtovvLZCDWOvlXKX3mSJFgzuaxZt8Pw==",
   "success": true,
   "projectFilePath": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\Infrastructure\\OnlineCaterer.Data\\OnlineCaterer.Data.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,6 @@
     "C:\\Users\\DELL\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\fluentvalidation\\11.6.0\\fluentvalidation.11.6.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

@@ -40,12 +40,15 @@ namespace OnlineCaterer.Web.Areas.Identity.Pages.Account.Manage
             var userName = await _userManager.GetUserNameAsync(user);
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
 
-            Username = userName;
-
-            Input = new InputModel
+            if (userName != null && phoneNumber != null)
             {
-                PhoneNumber = phoneNumber
-            };
+				Username = userName;
+
+				Input = new InputModel
+				{
+					PhoneNumber = phoneNumber
+				};
+			}
         }
 
         public async Task<IActionResult> OnGetAsync()

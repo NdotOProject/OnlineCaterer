@@ -7,14 +7,6 @@ public static class ApplicationServices
     {
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
-        var mapperConfig = new MapperConfiguration(mc =>
-        {
-            mc.AddProfile(new MappingProfile());
-        });
-
-        IMapper mapper = mapperConfig.CreateMapper();
-        services.AddSingleton<IMapper>(mapper);
-
         return services;
     }
 }

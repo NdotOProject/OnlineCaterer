@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "IutQAm8lr1eI7DjyhqS9TLcP42vf8zRu+qZTqmoEtZZd0WGoujjJXWhK84/DuhLKZyjnpbDlJeoRczCAcGKM9g==",
+  "dgSpecHash": "t5jIqJ7GGdGn7pM7pUSaaw4MNgtJm0BpG+/67lz3K2PKehGeFuv7dL8Vd38ceKhwFB4uz7rPfdUO0MxwJj443Q==",
   "success": true,
   "projectFilePath": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\Core\\OnlineCaterer.Application\\OnlineCaterer.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\fluentvalidation\\11.6.0\\fluentvalidation.11.6.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

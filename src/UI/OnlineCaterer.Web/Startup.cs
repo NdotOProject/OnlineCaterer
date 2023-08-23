@@ -18,13 +18,22 @@ public class Startup
     {
         //
         services.AddOptions();
-        services.AddSingleton<IConfiguration>(Configuration);
+        services.AddSingleton(Configuration);
 
-        // registor identity
-        services.AddIdentity<ApplicationUser, IdentityRole>()
+        services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+		services.AddDistributedMemoryCache();
+
+		services.AddSession(option =>
+		{
+			option.Cookie.Name = "SESSIONID";
+			option.IdleTimeout = TimeSpan.FromDays(7);
+		});
+
+		// registor identity
+		services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
-
         /*
         services.AddDefaultIdentity<ApplicationUser>()
                 .AddRoles<IdentityRole>()
@@ -41,7 +50,7 @@ public class Startup
             options.Password.RequireUppercase = false;
             options.Password.RequireNonAlphanumeric = false;
             options.Password.RequiredUniqueChars = 1;
-            options.Password.RequiredLength = 3; // password has min lengh equal to 3
+            options.Password.RequiredLength = 3; // password has min lenght equal to 3
 
             // lockout setting
             options.Lockout.AllowedForNewUsers = true;
@@ -58,6 +67,12 @@ public class Startup
             options.SignIn.RequireConfirmedEmail = false;
             options.SignIn.RequireConfirmedAccount = false;
 
+        });
+
+        services.ConfigureApplicationCookie(options => {
+            options.LoginPath = "/login/";
+            options.LogoutPath = "/logout/";
+            options.AccessDeniedPath = "/accessdenied/";
         });
 
         //
@@ -88,13 +103,18 @@ public class Startup
         app.UseHttpsRedirection();
         app.UseStaticFiles();
 
+        app.UseSession();
+
         app.UseRouting();
 
-        app.UseAuthorization();
         app.UseAuthentication();
+        app.UseAuthorization();
 
         app.UseEndpoints(endpoints =>
         {
+            /*endpoints.MapGet("/", async context =>
+            {
+            });*/
             endpoints.MapRazorPages();
             endpoints.MapControllerRoute(
                 name: "default",

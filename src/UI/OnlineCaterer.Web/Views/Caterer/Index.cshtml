@@ -1,10 +1,9 @@
 ﻿@page "/caterers/"
 @using OnlineCaterer.Web.Views.Shared;
-@using static OnlineCaterer.Web.Views.Caterer.IndexModel;
 @using static OnlineCaterer.Web.Views.Shared.PaginationViewComponent;
-@model OnlineCaterer.Web.Views.Caterer.IndexModel
+@model OnlineCaterer.Web.Views.Caterer.CatererIndexModel
 @{
-	ViewData["Title"] = "Caterer Index";
+	ViewData["Title"] = "Caterer List";
 }
 
 @* Search Form *@
@@ -15,10 +14,14 @@
 </form>
 @* End Search Form *@
 
+<a asp-page="/Caterer/Index">
+	Reset
+</a>
+
 <div class="row">
 	@foreach(var caterer in Model.Caterers.Items)
 	{
-		<partial name="CatererBox" model="caterer" />
+		@await Component.InvokeAsync("CatererBox", caterer)
 	}
 </div>
 

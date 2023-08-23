@@ -11,6 +11,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.9" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.9">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
@@ -19,13 +20,13 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="7.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.9" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="mailssave\" />
-    <Folder Include="Views\FoodType\" />
-    <Folder Include="Views\Place\" />
     <Folder Include="wwwroot\lib\bootstrap\" />
     <Folder Include="wwwroot\lib\bootstrap\dist\js\" />
     <Folder Include="wwwroot\lib\jquery-validation-unobtrusive\" />
@@ -33,6 +34,17 @@
     <Folder Include="wwwroot\lib\jquery-validation\dist\" />
     <Folder Include="wwwroot\lib\jquery\" />
     <Folder Include="wwwroot\lib\jquery\dist\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Shared\Icons\fa-cart-shopping-icon.cshtml" />
+    <None Include="Views\Shared\Icons\fa-login-icon.cshtml" />
+    <None Include="Views\Shared\Icons\fa-logout-icon.cshtml" />
+    <None Include="Views\Shared\Icons\fa-profile-icon.cshtml" />
+    <None Include="Views\Shared\Icons\fa-register-icon.cshtml" />
+    <None Include="Views\Shared\Icons\fa-search-icon.cshtml" />
+    <None Include="Views\Shared\Icons\fa-user-icon.cshtml" />
+    <None Include="wwwroot\images\favicon.png" />
   </ItemGroup>
 
   <ItemGroup>

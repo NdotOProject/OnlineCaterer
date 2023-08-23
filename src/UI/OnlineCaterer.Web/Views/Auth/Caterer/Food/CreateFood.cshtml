@@ -1,0 +1,83 @@
+﻿@page "/caterer/category/{categoryId:int}/create/"
+@using OnlineCaterer.Application.Common.Interfaces.Data;
+@using OnlineCaterer.Domain.Entities;
+@model OnlineCaterer.Web.Views.Auth.Caterer.Food.CreateFoodModel
+
+@inject IRepository<FoodType> FoodTypeRepository
+
+@await Component.InvokeAsync("FoodTypeList", FoodTypeRepository)
+
+
+<form asp-route="" method="post">
+	
+	<div>
+		<input asp-for="Input.Name"
+			   autocomplete="name" aria-required="true"
+			   placeholder="Enter category name"
+			   class="form-control" />
+
+		<label asp-for="Input.Name" class="form-label">
+			Food Name
+		</label>
+
+		<span asp-validation-for="Input.Name"
+			  class="text-danger">
+		</span>
+
+	</div>
+
+	<div>
+		<input asp-for="Input.QuantityPerUnit"
+			   autocomplete="name" aria-required="true"
+			   placeholder="Enter category name"
+			   class="form-control" />
+
+		<label asp-for="Input.QuantityPerUnit" class="form-label">
+			Food Name
+		</label>
+
+		<span asp-validation-for="Input.QuantityPerUnit"
+			  class="text-danger">
+		</span>
+
+	</div>
+
+	<div>
+		<input asp-for="Input.Description"
+			   autocomplete="name" aria-required="true"
+			   placeholder="Enter category name"
+			   class="form-control" />
+
+		<label asp-for="Input.Description" class="form-label">
+			Food Name
+		</label>
+
+		<span asp-validation-for="Input.Description"
+			  class="text-danger">
+		</span>
+
+	</div>
+
+	<div>
+		<input asp-for="Input.Price"
+			   autocomplete="name" aria-required="true"
+			   placeholder="Enter category name"
+			   class="form-control" />
+
+		<label asp-for="Input.Price" class="form-label">
+			Food Name
+		</label>
+
+		<span asp-validation-for="Input.Price"
+			  class="text-danger">
+		</span>
+
+	</div>
+
+	<div>
+		<button type="submit" class="w-100 btn btn-lg btn-primary">
+			Create
+		</button>
+	</div>
+
+</form>
