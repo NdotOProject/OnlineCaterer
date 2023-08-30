@@ -1,9 +1,33 @@
 ﻿@model OnlineCaterer.Web.Views.Caterer.CatererIndexModel.CatererIndexViewModel
-@{
-}
 
 <div class="col-lg-4 col-md-6">
 	
-	Hello @Model.Name
+	<div class="caterer_box">
+		@* title *@
+		<div class="caterer_box-title">
+			<h2>
+				@Model.Name
+			</h2>
+		</div>
+		@* intro *@
+		<div class="">
+			<p>
+				@Model.IntroduceMessage
+			</p>
+		</div>
+
+		@* button book *@
+		<a href="@Url.Page(ViewPathManager.CreateBooking, new { catererId = Model.UserId})">
+			Book Now
+		</a>
+	</div>
+
+
+
+
+
+	 
+
+
 	
 </div>

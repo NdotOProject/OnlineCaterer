@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using Web.Models;
+using OnlineCaterer.Web.Models;
 
-namespace Web.Controllers
+namespace OnlineCaterer.Web.Controllers
 {
     public class HomeController : Controller
     {

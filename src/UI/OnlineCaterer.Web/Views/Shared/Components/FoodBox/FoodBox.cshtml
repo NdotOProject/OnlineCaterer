@@ -1,14 +1,33 @@
 ﻿@using OnlineCaterer.Web.Views.Shared.Components.FoodBox;
 @model FoodBox.DataHolder
 
-<span>
-	@Model.Food.Name
-</span>
+@{
+	var food = Model.Food;
+}
 
-@*.Page("/Food/FoodIndex", new { foodId = Model.FoodId })"*@
-<a asp-page="/Food/FoodDetails"
-	asp-route-foodId="@Model.Food.FoodId"
-    asp-route-returnUrl="@Model.ReturnUrl"
-	class="">
-	Details
-</a>
+<div class="food_box">
+	<div class="food_box-img"></div>
+	<div class="food_box-content">
+		<span class="food_price">
+			<a href="">
+				@food.Price
+			</a>
+		</span>
+		<ul>
+			<li>@food.Name</li>
+			<li>@food.Category</li>
+			<li>@food.Discontinued</li>
+		</ul>
+
+		<a asp-page="@(ViewPathManager.FoodDetails)"
+			asp-route-categoryId="@food.CategoryId"
+			asp-route-foodId="@food.FoodId"
+			asp-route-returnUrl="@Model.ReturnUrl"
+			class="">
+			more information
+		</a>
+	</div>
+</div>
+
+
+

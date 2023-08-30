@@ -1,0 +1,7 @@
+﻿@model OnlineCaterer.Web.Views.Shared.Components.BookNowButton.BookNowButton
+
+<div class="book_now_btn">
+	<a href="@Url.Page(ViewPathManager.CreateBooking, new { catererId = Model.CatererId})" class="booking-btn">
+		Book Now
+	</a>
+</div>

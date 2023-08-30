@@ -32,6 +32,7 @@ D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\Web\obj\Debug\net7.0\ref\Onli
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\appsettings.Development.json
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\appsettings.json
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\bundleconfig.json
+D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\company-info.json
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\OnlineCaterer.Web.staticwebassets.runtime.json
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\OnlineCaterer.Web.exe
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\bin\Debug\net7.0\OnlineCaterer.Web.deps.json
@@ -302,11 +303,9 @@ D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\n
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\staticwebassets.build.json
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\staticwebassets.development.json
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\scopedcss\bundle\OnlineCaterer.Web.styles.css
-D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\scopedcss\projectbundle\OnlineCaterer.Web.bundle.scp.css
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.csproj.CopyComplete
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.dll
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\refint\OnlineCaterer.Web.dll
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.pdb
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\OnlineCaterer.Web.genruntimeconfig.cache
 D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\ref\OnlineCaterer.Web.dll
-D:\Projects\Aptech\Semester_3\OnlineCaterer\src\UI\OnlineCaterer.Web\obj\Debug\net7.0\scopedcss\Views\Shared\Layout\_Layout.cshtml.rz.scp.css

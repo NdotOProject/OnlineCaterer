@@ -1,0 +1,50 @@
+﻿@page "/caterers/"
+@using OnlineCaterer.Web.Views.Shared;
+@using static OnlineCaterer.Web.Views.Shared.PaginationModel;
+@using OnlineCaterer.Web.Views.Shared.Components.Pagination;
+@using OnlineCaterer.Web.Views.Shared.Layout.Components.Header;
+@model OnlineCaterer.Web.Views.Caterer.CatererIndexModel
+@{
+	ViewData["Title"] = NavItemManager.ListCatererPage.PageTitle;
+}
+
+<div class="caterer_list">
+	<div class="caterer-search_box">
+		@* Search Form *@
+		<form asp-page="@(NavItemManager.ListCatererPage.AspPage)"
+			method="get"
+		>
+			<label>
+				Search By Name
+			</label>
+			<input type="text" name="name" value="" />
+			<button type="submit">
+				Search
+			</button>
+		</form>
+		@* End Search Form *@
+
+		<a asp-page="@(NavItemManager.ListCatererPage.AspPage)"
+			class="refresh_btn"
+		>
+			Refresh
+		</a>
+	</div>
+
+	<div class="list_content row">
+		@foreach(var caterer in Model.Caterers.Items)
+		{
+			@await Component.InvokeAsync("CatererBox", caterer)
+		}
+	</div>
+
+	@{
+		var paginationModel = new PaginationModel(Url)
+		{
+			PageName = NavItemManager.ListCatererPage.AspPage,
+			CurrentPage = Model.CurrentPage ?? 1,
+			TotalPages = Model.Caterers.TotalPages,
+		};
+	}
+	@(await Component.InvokeAsync<Pagination>(paginationModel))
+</div>

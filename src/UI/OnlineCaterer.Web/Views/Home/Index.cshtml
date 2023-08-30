@@ -1,10 +1,18 @@
-﻿@page
+﻿@page "/"
+@using OnlineCaterer.Web.Views.Shared.Layout.Components.Header;
 @model OnlineCaterer.Web.Views.Home.IndexModel
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = NavItemManager.HomePage.PageTitle;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    show list food & food type
+
+
+    show list caterer
+
+
+    show place
+
+
 </div>

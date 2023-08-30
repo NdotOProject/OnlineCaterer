@@ -1,0 +1,60 @@
+﻿@model OnlineCaterer.Web.Views.Shared.PaginationModel
+
+@{
+	Dictionary<int, string?>? pageItems = null;
+	if (pageItems == null)
+	{
+		pageItems = Model.CreateFromRange();
+	}
+}
+<div id="pagination-box">
+	<ul class="pagination-list">
+		<li class="pagination-item prev">
+			<a class=""
+				@if (!Model.Previous())
+				{
+					@Html.Raw("href=\"#\"")
+					@Html.Raw("tabindex=\"-1\"")
+					@Html.Raw("aria-disabled=\"true\"")
+				}
+				else
+				{
+					@Html.Raw($"href=\"{Model.GeneratedUrl}\"")
+				} >
+				Prev
+			</a>
+		</li>
+
+		@foreach(var pageItem in pageItems)
+		{
+			<li class="pagination-item normal @(Model.IsCurrentPage(pageItem) ? "active" : "")">
+				<a class=""
+					href="@(Model.IsCurrentPage(pageItem) ? "#" : pageItem.Value)">
+					@pageItem.Key
+					@if (Model.IsCurrentPage(pageItem))
+					{
+						<span class="sr-only">
+							(current)
+						</span>
+					}
+				</a>
+			</li>
+		}
+
+		<li class="pagination-item next">
+			<a class=""
+				@if (!Model.Next())
+				{
+					@Html.Raw("href=\"#\"")
+					@Html.Raw("tabindex=\"-1\"")
+					@Html.Raw("aria-disabled=\"true\"")
+				}
+				else
+				{
+					@Html.Raw($"href=\"{Model.GeneratedUrl}\"")
+				} >
+				Next
+			</a>
+		</li>
+	</ul>
+</div>

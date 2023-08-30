@@ -1,0 +1,57 @@
+﻿@using OnlineCaterer.Web.Views.Shared.Components.BookNowButton
+@using OnlineCaterer.Web.Views.Shared.Layout.Components.Header;
+@using OnlineCaterer.Web.Views.Shared.Layout.Components.Header.Partials;
+
+@inject IRepository<OnlineCaterer.Domain.Entities.Caterer> CatererRepository
+
+<div class="hero_area">
+	@*header_background*@
+	@if (NavItemManager.HomePage.PageTitle.Equals(ViewData["Title"]))
+	{
+		<partial name="@(ManageLayoutComponents.HeaderBackground)" />
+	}
+	@*header_section*@
+	<header class="header_section">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg">
+				<div class="nav_content">
+					@*nav_brand*@
+					<div class="nav_side-content">
+						<partial name="@ManageLayoutComponents.NavBrand" />
+					</div>
+
+					@*nav_middle_content*@
+					<div id="nav_middle-root">
+						<partial name="@ManageLayoutComponents.CustomerMiddleNav" />
+					</div>
+
+					@*nav_button*@
+					<div class="nav_side-content left">
+						<div id="search_form" class="selected_option-content">
+							<form asp-page="@(ViewPathManager.SearchPage)" method="post">
+								<input class="search_input" type="text" placeholder="Enter supplier's name" />
+								<button type="submit" class="nav_search-btn">
+									<partial name="Icons/fa-search-icon"/>
+								</button>
+							</form>
+							@*<a asp-page="@(ViewPathManager.SearchPage)" class="form-link">
+								More Options...
+							</a>*@
+						</div>
+						<partial name="./Components/BookNowButton/BookNowButton" model="new BookNowButton(null)" />
+					</div>
+
+					<button class="nav_button" type="button">
+						<span></span>
+					</button>
+
+				</div>
+			</nav>
+		</div>
+	</header>
+	@*slider_section*@
+	@if (NavItemManager.HomePage.PageTitle.Equals(ViewData["Title"]))
+	{
+		<partial name="@(ManageLayoutComponents.SliderPartial)" model="new SliderPartial(CatererRepository)" />
+	}
+</div>

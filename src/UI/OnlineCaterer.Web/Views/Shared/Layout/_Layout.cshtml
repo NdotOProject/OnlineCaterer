@@ -1,76 +1,66 @@
 ﻿@using Microsoft.AspNetCore.Identity;
+@using OnlineCaterer.Application.Initialization;
 @using OnlineCaterer.Data.Identity;
 @using OnlineCaterer.Domain.Constants;
+@using static OnlineCaterer.Web.Views.Home.IndexModel;
+@using OnlineCaterer.Web.Views.Shared.Layout.Components.Header;
 
-@inject UserManager<ApplicationUser> UserManager
+@inject CompanyInfo CompanyInfo
 @inject SignInManager<ApplicationUser> SignInManager
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    @* Basic *@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    @* Mobile Metas *@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-
-    @* Site Metas *@
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-
     @* Favicon *@
     <link rel="shortcut icon" href="~/images/favicon.png" type="">
-
-    <title>@ViewData["Title"] - Online Caterer</title>
+    <title>@CompanyInfo.Brand - @ViewData["Title"]</title>
 
     @* Bootstrap *@
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-
+    <link rel="stylesheet" href="~/vender/bootstrap-5.3.1-dist/css/bootstrap.min.css" />
     @* owl slider stylesheet *@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
     @* nice select *@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
-          integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ=="
-          crossorigin="anonymous" />
-
+            integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ=="
+            crossorigin="anonymous" />
     @* Font Awesome *@
-    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/vender/font-awesome/font-awesome.min.css" />
 
-    @* Custom styles for this template *@
-    @*<link href="~/css/style.css" rel="stylesheet" />*@
+    @* Customize CSS *@
+    <link rel="stylesheet" href="~/css/reset.css" />
+    <link rel="stylesheet" href="~/css/support-bootstrap.css" />
+    <link rel="stylesheet" href="~/css/common.css" />
+    @* Layout Style *@
+    <link rel="stylesheet" href="~/css/layout/layout-style.css" />
+    <link rel="stylesheet" href="~/css/layout/header-style.css" />
+    <link rel="stylesheet" href="~/css/layout/main-style.css" />
+    <link rel="stylesheet" href="~/css/layout/sidebar-style.css" />
+    <link rel="stylesheet" href="~/css/layout/footer-styles.css" />
+
+    @* Components Style*@
+    <link rel="stylesheet" href="~/css/components/selected_option-style.css" />
+    <link rel="stylesheet" href="~/css/components/slider-styles.css" />
+    <link rel="stylesheet" href="~/css/components/caterer_list-style.css" />
+    <link rel="stylesheet" href="~/css/components/pagination-style.css" />
+    <link rel="stylesheet" href="~/css/components/food_box-style.css" />
 
     @* Responsive Style *@
     <link href="~/css/responsive.css" rel="stylesheet" />
-
-    @*<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />*@
-    @*<link rel="stylesheet" href="~/Web.styles.css" asp-append-version="true" />*@
     
-    @* Customize CSS *@
-    <link rel="stylesheet" href="~/css/support-bootstrap.css" />
-
-    @* Layout Style *@
-    <link rel="stylesheet" href="~/css/layout/layout-style.css" />
-
-    @* Header Style *@
-    <link rel="stylesheet" href="~/css/layout/header_partial-style.css" />
-    <link rel="stylesheet" href="~/css/layout/selected_option-style.css" />
-
-    @* Slider Style*@
-    <link rel="stylesheet" href="~/css/layout/slider-style.css" />
-
 </head>
 
 <body class="@{
-    if (!"Home Page".Equals(ViewData["Title"]) || User.IsInRole(ConstantsRoles.Caterer))
+    if (!NavItemManager.HomePage.PageTitle.Equals(ViewData["Title"])
+        || User.IsInRole(ConstantsRoles.Caterer))
     {
         @Html.Raw("sub_page")
     }
 }">
-   
+    @* Header *@
     @if (!SignInManager.IsSignedIn(User))
     {
         <partial name="@(ManageLayoutComponents.CustomerHeader)" />
@@ -86,78 +76,22 @@
             <partial name="@(ManageLayoutComponents.CustomerHeader)" />
         }
     }
+    @* End Header *@
+    @* Body Content *@
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+    @* End Body Content *@
 
-    @* Header *@ 
-    @*<div class="header_area">*@
-        @* Header Background *@
-        @*<div class="header_background">
-            <img src="~/images/hero-bg.jpg" alt="">
-        </div>*@
-        @* End Header Background *@
-@*
-        @if (!SignInManager.IsSignedIn(User))
-        {
-            <partial name="Header/_HeaderPartial" />
-        }
-        else
-        {
-            
-        }
+    <div id="rightbar-root">
+        <partial name="@(ManageLayoutComponents.SideBarRight)" />
+    </div>
 
-        @if ("Home Page".Equals(ViewData["Title"]))
-        {
-            
-        }
-*@
-@*
-        @if ("Home Page".Equals(ViewData["Title"]))
-        {
-            if (!SignInManager.IsSignedIn(User))
-            {
-                <partial name="Header/_HeaderPartial" />
-                <partial name="Header/_SliderPartial" />
-            }
-            else
-            {
-                if (User.IsInRole(ConstantsRoles.Customer))
-                {
-                    <partial name="Header/_HeaderPartial" />
-                    <partial name="Header/_SliderPartial" />
-                }
-
-                if (User.IsInRole(ConstantsRoles.Caterer))
-                {
-                    <partial name="Header/_CatererHeaderPartial" />
-                }
-            }
-
-        }*@
-    @*</div>*@
-    @* Header *@
-    @if (!SignInManager.IsSignedIn(User) ||  User.IsInRole(ConstantsRoles.Customer))
-    {
-        <div class="container">
-            <main role="main" class="pb-3">
-                @RenderBody()
-            </main>
-        </div>
-    }
-    
-    @if (User.IsInRole(ConstantsRoles.Caterer))
-    {
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    }
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; @DateTime.Now.Year - Online Caterer - <a asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    @* Footer *@
+    <partial name="@(ManageLayoutComponents.FooterPartial)" />
+    @* End Footer *@
 
     @* JQuery *@
-    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>*@
     <script src="~/vender/jquery-3.7.0/jquery-3.7.0.min.js"></script>
 
     @* popper js *@
@@ -167,7 +101,6 @@
     </script>
 
     @* bootstrap js *@
-    @*<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>*@
     <script src="~/vender/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
 
     @* owl slider *@
@@ -180,14 +113,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
 
     @* custom js *@
-    <script src="~/js/custom.js"></script>
+    @*<script src="~/js/custom.js"></script>*@
 
     <script src="~/js/header.js"></script>
-    
+    <script src="~/js/sidebars.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     
-
-
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

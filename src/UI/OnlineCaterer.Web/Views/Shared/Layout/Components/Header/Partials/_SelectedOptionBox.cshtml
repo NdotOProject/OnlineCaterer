@@ -64,13 +64,13 @@
 
 @* Search Form *@
 <div id="search_form" class="selected_option-content">
-    <form asp-page="/Home/SearchPage" method="post">
+    <form asp-page="@(ViewPathManager.SearchPage)" method="post">
         <input class="search_input" type="text" placeholder="Enter supplier's name" />
         <button type="submit" class="nav_search-btn">
             <partial name="Icons/fa-search-icon"/>
         </button>
     </form>
-    <a asp-page="/Home/SearchPage" class="form-link" >
+    <a asp-page="@(ViewPathManager.SearchPage)" class="form-link" >
         More Options...
     </a>
 </div>

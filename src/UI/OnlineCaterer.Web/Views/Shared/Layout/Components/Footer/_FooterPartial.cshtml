@@ -1,0 +1,133 @@
+﻿@using OnlineCaterer.Application.Initialization;
+@using OnlineCaterer.Web.Views.Shared.Layout.Components.Header;
+@inject CompanyInfo CompanyInfo
+
+<footer class="footer_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 footer-col">
+                <div class="footer_contact">
+                    <h4>
+                        Contact Us
+                    </h4>
+                    <ul class="contact_link_box">
+                        @if (!string.IsNullOrWhiteSpace(CompanyInfo.Address))
+                        {
+                            <li>
+                                <a href="@(CompanyInfo.Location)">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <span>
+                                        @CompanyInfo.Address
+                                    </span>
+                                </a>
+                            </li>
+                        }
+                        @if (!string.IsNullOrWhiteSpace(CompanyInfo.Phone))
+                        {
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <span>
+                                        @CompanyInfo.Phone
+                                    </span>
+                                </a>
+                            </li>
+                        }
+                        @if (!string.IsNullOrWhiteSpace(CompanyInfo.Mail))
+                        {
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <span>
+                                        @CompanyInfo.Mail
+                                    </span>
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 footer-col">
+                <div>
+                    <a href="" class="footer-logo">
+                        @CompanyInfo.Brand
+                    </a>
+                    <p class="footer-intro">
+                        @(CompanyInfo.Introduction.Length > 200
+                            ? $"{CompanyInfo.Introduction.Substring(0, 197)}..."
+                            : CompanyInfo.Introduction)
+                        <a asp-page="@(NavItemManager.AboutPage.AspPage)">more</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 footer-col">
+                <div class="footer_social">
+                    <h4>
+                        Social Media
+                    </h4>
+                    <div class="social-box row">
+                        <ul class="col-md-6 col-sm-12">
+                            <li>
+                                <a href="@CompanyInfo.Facebook.Link">
+                                    <span class="social-icon">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="social-text">
+                                        @CompanyInfo.Facebook.Title
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@CompanyInfo.Twitter.Link">
+                                    <span class="social-icon">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="social-text">
+                                        @CompanyInfo.Twitter.Title
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@CompanyInfo.Linkedin.Link">
+                                    <span class="social-icon">
+                                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="social-text">
+                                        @CompanyInfo.Linkedin.Title
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="col-md-6 col-sm-12">
+                            <li>
+                                <a href="@CompanyInfo.Instagram.Link">
+                                    <span class="social-icon">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="social-text">
+                                        @CompanyInfo.Instagram.Title
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@CompanyInfo.Pinterest.Link">
+                                    <span class="social-icon">
+                                        <i class="fa fa-pinterest" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="social-text">
+                                        @CompanyInfo.Pinterest.Title
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="coppyright">
+            <p>
+                &copy; @DateTime.Now.Year - @CompanyInfo.Brand - <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </p>
+        </div>
+    </div>
+</footer>

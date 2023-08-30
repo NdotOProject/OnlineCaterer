@@ -1,0 +1,19 @@
+﻿@using OnlineCaterer.Web.Views.Shared.Layout.Components.Header;
+<div id="nav_middle-content">
+	<ul>
+		@foreach (var item in NavItemManager.ViewModels)
+		{
+			<li class="nav-item @(item.PageTitle.Equals(ViewData["Title"]) ? "active" : "")">
+				<a asp-page="@(item.AspPage)" class="nav-link">
+					@(item.ShowTitle ?? item.PageTitle)
+					@if (item.PageTitle.Equals(ViewData["Title"]))
+					{
+						<span class="sr-only">
+							(current)
+						</span>
+					}
+				</a>
+			</li>
+		}
+	</ul>
+</div>

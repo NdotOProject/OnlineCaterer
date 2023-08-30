@@ -1,78 +1,37 @@
-﻿
+﻿@using OnlineCaterer.Web.Views.Shared.Components.BookNowButton;
+@model OnlineCaterer.Web.Views.Shared.Layout.Components.Header.Partials.SliderPartial
+
 <section class="slider_section">
-
     <div id="customCarousel1" class="carousel slide" data-bs-ride="carousel">
-        
         <div class="carousel-inner">
-            
-            <div class="carousel-item active">
-                <div class="container ">
-                    <div class="row">
-                        <div class="col-md-7 col-lg-6 ">
-                            <div class="detail-box">
-                                <h1>
-                                    Fast Food Restaurant
-                                </h1>
-                                <p>
-                                    Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
-                                </p>
-                                <div class="btn-box">
-                                    <a href="" class="btn1">
-                                        Order Now
-                                    </a>
+        @{
+            bool isFirst = true;
+            foreach(var caterer in Model.Caterers)
+            {
+                <div class="carousel-item @if(isFirst)
+                {
+                    @Html.Raw("active")
+                    isFirst = false;
+                }">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-7 col-lg-6 ">
+                                <div class="detail-box">
+                                    <h1>
+                                        @caterer.Name
+                                    </h1>
+                                    <p>
+                                        @caterer.IntroduceMessage
+                                    </p>
+                                    <partial name="./Components/BookNowButton/BookNowButton" model="new BookNowButton(caterer.UserId)" />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="carousel-item ">
-                <div class="container ">
-                    <div class="row">
-                        <div class="col-md-7 col-lg-6 ">
-                            <div class="detail-box">
-                                <h1>
-                                    Fast Food Restaurant
-                                </h1>
-                                <p>
-                                    Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
-                                </p>
-                                <div class="btn-box">
-                                    <a href="" class="btn1">
-                                        Order Now
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="container ">
-                    <div class="row">
-                        <div class="col-md-7 col-lg-6 ">
-                            <div class="detail-box">
-                                <h1>
-                                    Fast Food Restaurant
-                                </h1>
-                                <p>
-                                    Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
-                                </p>
-                                <div class="btn-box">
-                                    <a href="" class="btn1">
-                                        Order Now
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            }
+        }
         </div>
-        
         <div class="container">
             <ol class="carousel-indicators">
                 <li data-bs-target="#customCarousel1" data-bs-slide-to="0" class="active"></li>
@@ -82,4 +41,24 @@
         </div>
     </div>
 
+    <button type="button"
+        class="carousel-control-prev"
+        data-bs-target="#customCarousel1"
+        data-bs-slide="prev"
+    >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">
+            Previous
+        </span>
+    </button>
+    <button type="button"
+        class="carousel-control-next"
+        data-bs-target="#customCarousel1"
+        data-bs-slide="next"
+    >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">
+            Next
+        </span>
+    </button>
 </section>

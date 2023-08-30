@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Identity;
 using OnlineCaterer.Data.Identity;
 using OnlineCaterer.Data.Context;
+using OnlineCaterer.Web.Services;
+using OnlineCaterer.Application.Common.Interfaces;
 
 namespace OnlineCaterer.Web;
 
@@ -20,6 +22,8 @@ public class Startup
         services.AddOptions();
         services.AddSingleton(Configuration);
 
+        services.AddSingleton(CompanyInfoReader.GetCompanyInfo());
+
         services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 		services.AddDistributedMemoryCache();
@@ -29,6 +33,17 @@ public class Startup
 			option.Cookie.Name = "SESSIONID";
 			option.IdleTimeout = TimeSpan.FromDays(7);
 		});
+
+		services.AddRazorPages(options =>
+		{
+			options.RootDirectory = "/Views";
+		});
+
+		//services.AddDatabaseDeveloperPageExceptionFilter();
+
+		services.AddScoped<IUser, CurrentUser>();
+
+		services.AddHttpContextAccessor();
 
 		// registor identity
 		services.AddIdentity<ApplicationUser, IdentityRole>()
@@ -79,7 +94,6 @@ public class Startup
         services.AddApplicationServices();
         services.AddDataServices(Configuration);
         services.AddInfrastructureServices(Configuration);
-        services.AddWebServices();
 
         //
         services.AddControllersWithViews();

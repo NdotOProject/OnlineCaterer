@@ -180,8 +180,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxCb29raW5nXEJvb2tpbmdEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Auth/Booking/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxCb29raW5nXEluZGV4LmNzaHRtbA==
+[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Auth/Booking/BookingIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxCb29raW5nXEJvb2tpbmdJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Auth/Caterer/FoodType/CreateFoodType.cshtml]
@@ -200,36 +200,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxDYXRlcmVyXEZvb2RcQ3JlYXRlRm9vZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Auth/Caterer/ResponseMessage/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxDYXRlcmVyXFJlc3BvbnNlTWVzc2FnZVxDcmVhdGUuY3NodG1s
+[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Auth/Caterer/ResponseMessage/CreateMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxDYXRlcmVyXFJlc3BvbnNlTWVzc2FnZVxDcmVhdGVNZXNzYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Auth/Caterer/ResponseMessage/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxDYXRlcmVyXFJlc3BvbnNlTWVzc2FnZVxEZWxldGUuY3NodG1s
+[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Auth/Caterer/ResponseMessage/DeleteMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxDYXRlcmVyXFJlc3BvbnNlTWVzc2FnZVxEZWxldGVNZXNzYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Auth/Caterer/ResponseMessage/ListMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxDYXRlcmVyXFJlc3BvbnNlTWVzc2FnZVxMaXN0TWVzc2FnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Auth/Caterer/ResponseMessage/Update.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxDYXRlcmVyXFJlc3BvbnNlTWVzc2FnZVxVcGRhdGUuY3NodG1s
+[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Auth/Caterer/ResponseMessage/UpdateMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxDYXRlcmVyXFJlc3BvbnNlTWVzc2FnZVxVcGRhdGVNZXNzYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Auth/Customer/Booking/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxDdXN0b21lclxCb29raW5nXENyZWF0ZS5jc2h0bWw=
+[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Auth/Customer/Booking/CreateBooking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxDdXN0b21lclxCb29raW5nXENyZWF0ZUJvb2tpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Auth/Place/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxQbGFjZVxDcmVhdGUuY3NodG1s
+[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Auth/Place/CreatePlace.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxQbGFjZVxDcmVhdGVQbGFjZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Caterer/CatererRegister.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZXJlclxDYXRlcmVyUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Caterer/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZXJlclxJbmRleC5jc2h0bWw=
+[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Caterer/ListCaterer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZXJlclxMaXN0Q2F0ZXJlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Customer/SearchPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcU2VhcmNoUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Food/FoodDetails.cshtml]
@@ -256,12 +260,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Home/SearchPage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWFyY2hQYWdlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Place/PlaceIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhY2VcUGxhY2VJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Shared/Components/BookNowButton/BookNowButton.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQm9va05vd0J1dHRvblxCb29rTm93QnV0dG9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Shared/Components/CatererBox/CatererBox.cshtml]
@@ -274,6 +278,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Shared/Components/FoodTypeList/ListTypes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRm9vZFR5cGVMaXN0XExpc3RUeXBlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Shared/Components/Pagination/Pagination.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUGFnaW5hdGlvblxQYWdpbmF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Shared/Error.cshtml]
@@ -308,12 +316,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEljb25zXGZhLXVzZXItaWNvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Shared/Layout/Components/Footer/_FooterPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExheW91dFxDb21wb25lbnRzXEZvb3RlclxfRm9vdGVyUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Shared/Layout/Components/Header/Partials/_CustomerMiddleNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExheW91dFxDb21wb25lbnRzXEhlYWRlclxQYXJ0aWFsc1xfQ3VzdG9tZXJNaWRkbGVOYXYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Shared/Layout/Components/Header/Partials/_HeaderBackground.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExheW91dFxDb21wb25lbnRzXEhlYWRlclxQYXJ0aWFsc1xfSGVhZGVyQmFja2dyb3VuZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Shared/Layout/Components/Header/Partials/_NavLeft.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExheW91dFxDb21wb25lbnRzXEhlYWRlclxQYXJ0aWFsc1xfTmF2TGVmdC5jc2h0bWw=
+[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Shared/Layout/Components/Header/Partials/_NavBrand.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExheW91dFxDb21wb25lbnRzXEhlYWRlclxQYXJ0aWFsc1xfTmF2QnJhbmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Shared/Layout/Components/Header/Partials/_SelectedOptionBox.cshtml]
@@ -328,12 +344,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExheW91dFxDb21wb25lbnRzXEhlYWRlclxfQ2F0ZXJlckhlYWRlclBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Shared/Layout/Components/Header/_CustomerHeader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExheW91dFxDb21wb25lbnRzXEhlYWRlclxfQ3VzdG9tZXJIZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Shared/Layout/Components/Header/_CustomerHeaderPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExheW91dFxDb21wb25lbnRzXEhlYWRlclxfQ3VzdG9tZXJIZWFkZXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Shared/_PaginationViewComponent.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdpbmF0aW9uVmlld0NvbXBvbmVudC5jc2h0bWw=
+[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Shared/Layout/Components/SideBar/SideBarLeft.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExheW91dFxDb21wb25lbnRzXFNpZGVCYXJcU2lkZUJhckxlZnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Shared/Layout/Components/SideBar/SideBarRight.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExheW91dFxDb21wb25lbnRzXFNpZGVCYXJcU2lkZUJhclJpZ2h0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Shared/Layout/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExheW91dFxfTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
@@ -347,7 +375,3 @@ build_metadata.AdditionalFiles.CssScope =
 [D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Projects/Aptech/Semester_3/OnlineCaterer/src/UI/OnlineCaterer.Web/Views/Shared/Layout/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExheW91dFxfTGF5b3V0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = b-x827qdvck1

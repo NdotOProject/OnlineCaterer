@@ -1,0 +1,59 @@
+﻿:root {
+    --pagination-item-size: 40px;
+    --pagination-item-active-extend: 10px;
+    --pagination-item-active-size: calc(var(--pagination-item-size) + var(--pagination-item-active-extend))
+}
+
+#pagination-box {
+    width: 100%;
+    height: var(--pagination-item-active-size);
+    display: flex;
+    justify-content: center;
+}
+
+ul.pagination-list {
+    list-style: none;
+    display: inline-flex;
+    padding-inline-start: 0;
+}
+
+    ul.pagination-list
+    li.pagination-item {
+        width: var(--pagination-item-active-size);
+        height: var(--pagination-item-active-size);
+        display: flex;
+        align-items: center;
+    }
+
+        ul.pagination-list
+        li.pagination-item a {
+            width: var(--pagination-item-size);
+            height: var(--pagination-item-size);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #222831;
+            border-radius: 50%;
+        }
+
+        ul.pagination-list
+        li.pagination-item.normal.active a,
+        ul.pagination-list
+        li.pagination-item.normal a:hover {
+            font-size: 15px;
+            color: #ffbe33;
+            width: var(--pagination-item-active-size);
+            height: var(--pagination-item-active-size);
+            transform: translate(calc(0px - var(--pagination-item-active-extend) / 2), 0);
+        }
+
+        ul.pagination-list
+        li.pagination-item.prev a:hover,
+        ul.pagination-list
+        li.pagination-item.next a:hover {
+            color: #ffbe33;
+            width: var(--pagination-item-size);
+            height: var(--pagination-item-size);
+        }

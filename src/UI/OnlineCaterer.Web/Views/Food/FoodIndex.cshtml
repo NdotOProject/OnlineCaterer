@@ -1,14 +1,20 @@
-﻿@page "/category/{categoryId:int?}/"
+﻿@page "/menu/{categoryId:int?}/"
 @using OnlineCaterer.Web.Views.Shared;
 @using OnlineCaterer.Web.Views.Shared.Components.FoodBox;
+@using OnlineCaterer.Web.Views.Shared.Components.Pagination;
+@using OnlineCaterer.Web.Views.Shared.Layout.Components.Header;
 @inject IRepository<FoodType> FoodTypeRepository
 @model FoodIndexModel
+
+@{
+	ViewData["Title"] = NavItemManager.FoodMenuPage.PageTitle;
+}
 
 @{
 	var foods = Model.Foods;
 }
 
-<div class="row">
+<div class="food_page row">
 	<div class="col-4">
 		@await Component.InvokeAsync("FoodTypeList", FoodTypeRepository)
 	</div>
@@ -36,16 +42,14 @@
 				)
 			}
 		}
-
-
 		@{
-			var generateUrl = new PaginationViewComponent(Url)
+			var paginationModel = new PaginationModel(Url)
 			{
-				PageName = "/Food/FoodIndex",
+				PageName = NavItemManager.FoodMenuPage.AspPage,
 				CurrentPage = Model.CurrentPage ?? 1,
 				TotalPages = foods.TotalPages,
 			};
 		}
-		<partial name="_PaginationViewComponent" model="@generateUrl" />
+		@(await Component.InvokeAsync<Pagination>(paginationModel))
 	</div>
 </div>

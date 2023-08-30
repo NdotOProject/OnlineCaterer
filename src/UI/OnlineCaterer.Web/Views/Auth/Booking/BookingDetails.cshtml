@@ -1,9 +1,7 @@
 ﻿@page "/booking/{bookingId:int}/details/"
 @model OnlineCaterer.Web.Views.Auth.Booking.BookingDetailsModel
-@{
-}
 
-<a asp-page="./Index">
+<a asp-page="@(ViewPathManager.BookingIndex)">
 	Back
 </a>
 
@@ -15,8 +13,11 @@
 		@bookingDetails.Food.Name
 	</div>
 
+	@bookingDetails.Quantity
+
 	<div>
-		<a asp-page="/Food/FoodDetails"
+		<a asp-page="@(ViewPathManager.FoodDetails)"
+			asp-route-categoryId="@bookingDetails.Food.CategoryId"
 			asp-route-foodId="@bookingDetails.Food.FoodId"
 			asp-route-returnUrl="@Request.Path">
 			Food Details

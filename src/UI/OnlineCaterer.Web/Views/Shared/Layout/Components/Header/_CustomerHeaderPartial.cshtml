@@ -1,4 +1,10 @@
-﻿
+﻿@using OnlineCaterer.Application.Common.Interfaces.Data;
+@using static OnlineCaterer.Web.Views.Home.IndexModel
+@using OnlineCaterer.Web.Views.Shared.Layout.Components.Header;
+@using OnlineCaterer.Web.Views.Shared.Layout.Components.Header.Partials;
+
+@inject IRepository<OnlineCaterer.Domain.Entities.Caterer> CatererRepository
+
 <div class="header_area">
 	<partial name="@(ManageLayoutComponents.HeaderBackground)" />
 	@* Header Section *@
@@ -7,47 +13,39 @@
 			@* Navbar *@
 			<nav class="navbar navbar-expand-lg custom_nav-container row">
 				@* Navbar Left Content*@
-				<partial name="@(ManageLayoutComponents.NavLeft)" />
+				<div id="navbar-left" class="col-lg-3">
+					@* Brand & Home *@
+					<partial name="@ManageLayoutComponents.NavBrand" />
+					@* End Brand & Home *@
+
+					@* Collapse Button *@
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+							data-bs-target="#NavbarContent" aria-controls="NavbarContent"
+							aria-expanded="false" aria-label="Toggle navigation">
+						<span class=""> </span>
+					</button>
+					@* End Collapse Button *@
+				</div>
 				@* End Navbar Left Content*@
 
 				@* Navbar Middle & Right Content *@
 				<div id="NavbarContent" class="collapse navbar-collapse col-lg-9 col-md-12 row">
 					@* Navbar Middle Content *@
 					<ul id="navbar-middle" class="navbar-nav mx-auto col-md-8">
-						@* Home Link *@
-						<li class="nav-item active">
-							<a asp-controller="Home" asp-action="Index" class="nav-link">
-								Home
-								<span class="sr-only">
-									(current)
-								</span>
-							</a>
-						</li>
-						@* End Home Link *@
-
-						@* Caterer Link *@
-						<li class="nav-item">
-							<a asp-page="/Caterer/Index" class="nav-link">
-								Caterers
-							</a>
-						</li>
-						@* End Caterer Link *@
-
-						@* Menu Link *@
-						<li class="nav-item">
-							<a asp-page="/Food/FoodIndex" class="nav-link">
-								Menu
-							</a>
-						</li>
-						@* End Menu Link *@
-
-						@* About Link *@
-						<li class="nav-item">
-							<a asp-page="/Home/About" class="nav-link">
-								About
-							</a>
-						</li>
-						@* End About Link *@
+						@foreach(var item in NavItemManager.ViewModels)
+						{
+							<li class="nav-item @(item.PageTitle.Equals(ViewData["Title"]) ? "active" : "")">
+								<a asp-page="@(item.AspPage)" class="nav-link">
+									@(item.ShowTitle ?? item.PageTitle)
+									@if (item.PageTitle.Equals(ViewData["Title"]))
+									{
+										<span class="sr-only">
+											(current)
+										</span>
+									}
+								</a>
+							</li>
+						}
 					</ul>
 					@* End Navbar Middle Content *@
 
@@ -75,14 +73,16 @@
 
 							@* Booking Option *@
 							<div class="col-md-2 option-box">
-								<a asp-page="/Auth/Booking/Index" class="user_option-icon">
+								<a asp-page="@(ViewPathManager.BookingIndex)" class="user_option-icon">
 									<partial name="Icons/fa-cart-shopping-icon" />
 								</a>
 							</div>
 							@* End Booking Option *@
 
 							@* Booking Button*@
-							<a asp-page="/Auth/Customer/Booking/Create" class="booking-btn col-lg-6">
+							<a asp-page="@(ViewPathManager.CreateBooking)"
+								asp-route-catererId=""
+								class="booking-btn col-lg-6">
 								<span>
 									Book Now
 								</span>
@@ -105,10 +105,9 @@
 	@* End Header Section *@
 
 	@* Slider Section *@
-	@if ("Home Page".Equals(ViewData["Title"]))
+	@if (NavItemManager.HomePage.PageTitle.Equals(ViewData["Title"]))
 	{
-		<partial name="@(ManageLayoutComponents.SliderPartial)" />
+		<partial name="@(ManageLayoutComponents.SliderPartial)" model="new SliderPartial(CatererRepository)" />
 	}
 	@* End Slider Section *@
 </div>
-@* End Header *@

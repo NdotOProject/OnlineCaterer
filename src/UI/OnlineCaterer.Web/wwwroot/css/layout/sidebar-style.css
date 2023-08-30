@@ -1,0 +1,67 @@
+﻿@import url(../common.css);
+
+#rightbar-root {
+    position: fixed;
+    width: 0;
+    height: calc(100vh - 104px);
+    transition: all 0.5s;
+    z-index: 5;
+}
+
+    #rightbar-root.show {
+        width: 20%;
+    }
+
+        #rightbar-root.show
+        #sidebar_right {
+            width: 0;
+            height: calc(100vh - 104px);
+            background-color: var(--main-color);
+            border-radius: 10px;
+            border: 3px solid var(--highlight-color);
+            position: fixed;
+            top: 104px;
+            right: -10px;
+            display: flex;
+            transition: all 0.5s;
+        }
+
+            #rightbar-root.show
+            #sidebar_right.show {
+                width: 20%;
+                right: 0;
+            }
+
+#sidebar_right
+#nav_middle-content
+ul {
+    flex-wrap: wrap;
+}
+
+    #sidebar_right
+    #nav_middle-content
+    ul
+    li.nav-item {
+        width: 100%;
+    }
+
+        #sidebar_right
+        #nav_middle-content
+        ul
+        li.nav-item
+        .nav-link {
+            width: 100%;
+        }
+
+        #sidebar_right
+        #nav_middle-content
+        ul
+        li.nav-item:hover
+        .nav-link,
+        #sidebar_right
+        #nav_middle-content
+        ul
+        li.nav-item.active
+        .nav-link {
+            color: var(--highlight-color);
+        }

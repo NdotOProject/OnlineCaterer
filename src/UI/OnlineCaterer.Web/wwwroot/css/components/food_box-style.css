@@ -1,0 +1,102 @@
+﻿@import url(../common.css);
+
+:root{
+    --background-url: url(../../images/hero-bg.jpg);
+}
+
+.food_box {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    .food_box .food_box-img {
+        position: relative;
+        width: 100%;
+        height: 240px;
+        border-radius: 15px;
+        background: var(--background-url);
+        background-size: cover;
+    }
+
+        .food_box .food_box-img::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-radius: 50%;
+            box-shadow: -10px 10px 0 #fff;
+        }
+
+        .food_box .food_box-img::after {
+            content: '';
+            position: absolute;
+            bottom: 70px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-radius: 50%;
+            box-shadow: -10px 10px 0 #fff;
+        }
+
+    .food_box .food_box-content {
+        position: relative;
+        width: 100%;
+        height: 150px;
+        background: #232949;
+        border-radius: 15px;
+        border-top-left-radius: 0;
+    }
+
+        .food_box .food_box-content .food_price {
+            position: absolute;
+            top: -80px;
+            height: 80px;
+            width: 50%;
+            background: #232949;
+            border-top: 10px solid #fff;
+            border-right: 10px solid #fff;
+            border-top-right-radius: 25px;
+        }
+
+            .food_box .food_box-content .food_price::before {
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                background: transparent;
+                border-radius: 50%;
+                box-shadow: -10px -10px 0 #fff;
+            }
+
+            .food_box .food_box-content .food_price::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: -25px;
+                width: 25px;
+                height: 25px;
+                background: transparent;
+                border-radius: 50%;
+                box-shadow: -10px 10px 0 #232949;
+            }
+
+        .food_box .food_box-content .food_price a {
+            position: relative;
+            background: #fff;
+            padding: 10px 20px;
+            margin: 15px 15px;
+            display: block;
+            border-radius: 7px;
+            color: #333;
+            font-weight: 500;
+            text-decoration: none;
+            text-align: center;
+        }

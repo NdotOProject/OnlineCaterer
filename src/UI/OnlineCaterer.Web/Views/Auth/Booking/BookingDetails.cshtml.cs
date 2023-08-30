@@ -18,10 +18,10 @@ namespace OnlineCaterer.Web.Views.Auth.Booking
 
         private readonly MapperConfiguration bookingDetailsMapperConfig = new(config =>
             config.CreateProjection<BookingDetails, BookingDetailsViewModel>()
-            .ForMember(vm => vm.Food, conf => conf.MapFrom(bd => bd.Food))
+            /*.ForMember(vm => vm.Food, conf => conf.MapFrom(bd => bd.Food))
 			.ForMember(vm => vm.UnitPrice, conf => conf.MapFrom(bd => bd.UnitPrice))
             .ForMember(vm => vm.Quantity, conf => conf.MapFrom(bd => bd.Quantity))
-            .ForMember(vm => vm.Discount, conf => conf.MapFrom(bd => bd.Discount))
+            .ForMember(vm => vm.Discount, conf => conf.MapFrom(bd => bd.Discount))*/
         );
 
         private readonly IRepository<BookingDetails> _bookingDetailsRepository;

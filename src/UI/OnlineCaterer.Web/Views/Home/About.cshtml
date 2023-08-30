@@ -1,7 +1,11 @@
-﻿@page
-@model OnlineCaterer.Web.Views.Home.AboutModel
+﻿@page "/about/"
+@using OnlineCaterer.Application.Initialization;
+@using OnlineCaterer.Web.Views.Shared.Layout.Components.Header;
+@inject CompanyInfo CompanyInfo
 @{
-	ViewData["Title"] = "About Page";
+	ViewData["Title"] = NavItemManager.AboutPage.PageTitle;
 }
 
-<h1>About OnlineCaterer</h1>
+<h1>@(NavItemManager.AboutPage.PageTitle)</h1>
+
+@CompanyInfo.Brand

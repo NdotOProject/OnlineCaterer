@@ -1,28 +1,52 @@
 {
   "Files": [
     {
-      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\OnlineCaterer.Web.bundle.scp.css",
-      "PackagePath": "staticwebassets\\OnlineCaterer.Web.bundle.scp.css"
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\common.css",
+      "PackagePath": "staticwebassets\\css\\common.css"
     },
     {
-      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\font-awesome.min.css",
-      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\caterer_list-style.css",
+      "PackagePath": "staticwebassets\\css\\components\\caterer_list-style.css"
     },
     {
-      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\header_partial-style.css",
-      "PackagePath": "staticwebassets\\css\\layout\\header_partial-style.css"
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\food_box-style.css",
+      "PackagePath": "staticwebassets\\css\\components\\food_box-style.css"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\pagination-style.css",
+      "PackagePath": "staticwebassets\\css\\components\\pagination-style.css"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\selected_option-style.css",
+      "PackagePath": "staticwebassets\\css\\components\\selected_option-style.css"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\slider-styles.css",
+      "PackagePath": "staticwebassets\\css\\components\\slider-styles.css"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\footer-styles.css",
+      "PackagePath": "staticwebassets\\css\\layout\\footer-styles.css"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\header-style.css",
+      "PackagePath": "staticwebassets\\css\\layout\\header-style.css"
     },
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\layout-style.css",
       "PackagePath": "staticwebassets\\css\\layout\\layout-style.css"
     },
     {
-      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\selected_option-style.css",
-      "PackagePath": "staticwebassets\\css\\layout\\selected_option-style.css"
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\main-style.css",
+      "PackagePath": "staticwebassets\\css\\layout\\main-style.css"
     },
     {
-      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\slider-style.css",
-      "PackagePath": "staticwebassets\\css\\layout\\slider-style.css"
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\sidebar-style.css",
+      "PackagePath": "staticwebassets\\css\\layout\\sidebar-style.css"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\reset.css",
+      "PackagePath": "staticwebassets\\css\\reset.css"
     },
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\responsive.css",
@@ -53,18 +77,6 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\fonts\\fontawesome-webfont.ttf",
-      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
-    },
-    {
-      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\fonts\\fontawesome-webfont.woff",
-      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
-    },
-    {
-      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\fonts\\fontawesome-webfont.woff2",
-      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
-    },
-    {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\favicon.png",
       "PackagePath": "staticwebassets\\images\\favicon.png"
     },
@@ -73,12 +85,24 @@
       "PackagePath": "staticwebassets\\images\\hero-bg.jpg"
     },
     {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\booking-create.js",
+      "PackagePath": "staticwebassets\\js\\booking-create.js"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\cookie.js",
+      "PackagePath": "staticwebassets\\js\\cookie.js"
+    },
+    {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\custom.js",
       "PackagePath": "staticwebassets\\js\\custom.js"
     },
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\header.js",
       "PackagePath": "staticwebassets\\js\\header.js"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\sidebars.js",
+      "PackagePath": "staticwebassets\\js\\sidebars.js"
     },
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\site.js",
@@ -503,6 +527,22 @@
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\vender\\bootstrap-5.3.1-dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\vender\\bootstrap-5.3.1-dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\vender\\font-awesome\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\vender\\font-awesome\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\vender\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\vender\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\vender\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\vender\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\vender\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\vender\\fonts\\fontawesome-webfont.woff2"
     },
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\vender\\jquery-3.7.0\\jquery-3.7.0.js",
