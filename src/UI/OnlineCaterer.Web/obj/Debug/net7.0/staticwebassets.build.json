@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SSAXUelSk4FL00JRpI4umzszaataHqH65NmjE45w058=",
+  "Hash": "HPnsCihhqhfUAQ392eRiHJE95RaiRAP+OC10UW2qxTI=",
   "Source": "OnlineCaterer.Web",
   "BasePath": "_content/OnlineCaterer.Web",
   "Mode": "Default",
@@ -1054,12 +1054,12 @@
       "OriginalItemSpec": "wwwroot\\css\\common.css"
     },
     {
-      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\caterer_list-style.css",
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\caterer_list-styles.css",
       "SourceId": "OnlineCaterer.Web",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
       "BasePath": "_content/OnlineCaterer.Web",
-      "RelativePath": "css/components/caterer_list-style.css",
+      "RelativePath": "css/components/caterer_list-styles.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1068,15 +1068,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\components\\caterer_list-style.css"
+      "OriginalItemSpec": "wwwroot\\css\\components\\caterer_list-styles.css"
     },
     {
-      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\food_box-style.css",
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\food_page-style.css",
       "SourceId": "OnlineCaterer.Web",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
       "BasePath": "_content/OnlineCaterer.Web",
-      "RelativePath": "css/components/food_box-style.css",
+      "RelativePath": "css/components/food_page-style.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1085,7 +1085,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\components\\food_box-style.css"
+      "OriginalItemSpec": "wwwroot\\css\\components\\food_page-style.css"
+    },
+    {
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\input-custom.css",
+      "SourceId": "OnlineCaterer.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
+      "BasePath": "_content/OnlineCaterer.Web",
+      "RelativePath": "css/components/input-custom.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\components\\input-custom.css"
     },
     {
       "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\pagination-style.css",
@@ -1341,23 +1358,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\support-bootstrap.css"
-    },
-    {
-      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\favicon.ico",
-      "SourceId": "OnlineCaterer.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
-      "BasePath": "_content/OnlineCaterer.Web",
-      "RelativePath": "favicon.ico",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
       "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\favicon.png",

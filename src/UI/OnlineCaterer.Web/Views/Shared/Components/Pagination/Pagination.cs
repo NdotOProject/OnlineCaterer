@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OnlineCaterer.Web.Models;
 
 namespace OnlineCaterer.Web.Views.Shared.Components.Pagination
 {

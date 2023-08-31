@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using OnlineCaterer.Web.Models.FoodType;
 
 namespace OnlineCaterer.Web.Views.FoodType
 {
@@ -7,19 +8,9 @@ namespace OnlineCaterer.Web.Views.FoodType
     {
 
 
-        public class UpdateFoodTypeViewModel
-        {
-			public int Id { get; set; }
+        public FoodTypeUpdateViewModel Input { get; set; }
 
-			public string Name { get; set; }
-
-			public string Description { get; set; }
-
-		}
-
-        public UpdateFoodTypeViewModel UpdateModel { get; set; }
-
-		public async Task OnGetAsync()
+		public /*async Task*/ void OnGetAsync()
         {
 
         }

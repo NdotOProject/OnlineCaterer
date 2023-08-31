@@ -1,33 +1,32 @@
-﻿@model OnlineCaterer.Web.Views.Caterer.CatererIndexModel.CatererIndexViewModel
+﻿@using OnlineCaterer.Web.Models.Caterer;
+@using OnlineCaterer.Web.Views.Shared.Components.BookNowButton;
+@model CatererIndexViewModel
 
-<div class="col-lg-4 col-md-6">
-	
-	<div class="caterer_box">
+<div class="caterer_box">
+	<div class="caterer_box-img"></div>
+	<div class="caterer_box-content">
+		@* button book *@
+		<div class="caterer_box-btn">
+			<partial name="./Components/BookNowButton/BookNowButton" model="new BookNowButton(Model.UserId)" />
+		</div>
+
 		@* title *@
 		<div class="caterer_box-title">
 			<h2>
 				@Model.Name
 			</h2>
 		</div>
+
 		@* intro *@
-		<div class="">
+		<div class="caterer_box-message">
 			<p>
 				@Model.IntroduceMessage
 			</p>
 		</div>
 
-		@* button book *@
-		<a href="@Url.Page(ViewPathManager.CreateBooking, new { catererId = Model.UserId})">
-			Book Now
+		<a class="caterer_box-link">
+			more information
 		</a>
 	</div>
 
-
-
-
-
-	 
-
-
-	
 </div>

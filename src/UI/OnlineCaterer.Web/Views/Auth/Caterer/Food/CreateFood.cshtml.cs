@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using OnlineCaterer.Application.Common.Interfaces;
 using OnlineCaterer.Application.Common.Interfaces.Data;
 using OnlineCaterer.Domain.Constants;
+using OnlineCaterer.Web.Models.Food;
 
 namespace OnlineCaterer.Web.Views.Auth.Caterer.Food
 {
@@ -21,25 +22,16 @@ namespace OnlineCaterer.Web.Views.Auth.Caterer.Food
             _user = user;
         }
 
-        public class CreateFoodViewModel
-        {
-			//public int CategoryId { get; set; }
-			public string Name { get; set; }
-			public string QuantityPerUnit { get; set; }
-			public string Description { get; set; }
-			public decimal Price { get; set; }
-
-		}
-
         [BindProperty]
-        public CreateFoodViewModel Input { get; set; }
+        public FoodCreateViewModel Input { get; set; }
 
 		public IActionResult OnGet()
         {
             return Page();
         }
 
-        public async Task<IActionResult> OnPost([FromRoute(Name = "categoryId")] int categoryId)
+        public async Task<IActionResult> OnPost(
+            [FromRoute(Name = "categoryId")] int categoryId)
         {
             if (ModelState.IsValid)
             {
@@ -54,15 +46,11 @@ namespace OnlineCaterer.Web.Views.Auth.Caterer.Food
                         Description = Input.Description,
                         Price = Input.Price,
                     };
-
                     _foodRepository.Insert(food);
-
                     await _foodRepository.SaveChangesAsync();
-
-                    return RedirectToPage("/Food/FoodIndex");
+					return RedirectToPage(ViewPathManager.FoodIndex);
                 }
             }
-
             return Page();
         }
     }

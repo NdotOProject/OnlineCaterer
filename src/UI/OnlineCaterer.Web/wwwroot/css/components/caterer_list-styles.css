@@ -1,0 +1,152 @@
+﻿@import url(../common.css);
+
+:root {
+    --background-url: url(../../images/hero-bg.jpg);
+    --page-background-color: #fff;
+}
+
+.caterer_list {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+    .caterer_list
+    .list_content {
+        width: 100%;
+        height: 100%;
+    }
+
+.caterer_box {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+    .caterer_box
+    .caterer_box-img {
+        width: 100%;
+        height: 240px;
+        position: relative;
+        border-radius: 15px;
+        background: var(--background-url);
+        background-size: cover;
+    }
+
+        .caterer_box
+        .caterer_box-img::before,
+        .caterer_box
+        .caterer_box-img::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background: transparent;
+            border-radius: 50%;
+            box-shadow: -10px 10px 0 var(--page-background-color);
+        }
+
+        .caterer_box
+        .caterer_box-img::before {
+            bottom: 0;
+            left: 50%;
+        }
+
+        .caterer_box
+        .caterer_box-img::after {
+            bottom: 70px;
+            left: 0;
+        }
+
+    .caterer_box
+    .caterer_box-content {
+        width: 100%;
+        height: 150px;
+        position: relative;
+        border-radius: 15px;
+        background: var(--main-color);
+        border-top-left-radius: 0;
+    }
+
+        .caterer_box
+        .caterer_box-content
+        .caterer_box-btn {
+            height: 80px;
+            width: 50%;
+            position: absolute;
+            top: -80px;
+            background: var(--main-color);
+            border-top: 10px solid var(--page-background-color);
+            border-right: 10px solid var(--page-background-color);
+            border-top-right-radius: 25px;
+        }
+
+            .caterer_box
+            .caterer_box-content
+            .caterer_box-btn::before,
+            .caterer_box
+            .caterer_box-content
+            .caterer_box-btn::after {
+                content: '';
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                background: transparent;
+                border-radius: 50%;
+            }
+
+            .caterer_box
+            .caterer_box-content
+            .caterer_box-btn::before {
+                box-shadow: -10px -10px 0 var(--page-background-color);
+            }
+
+            .caterer_box
+            .caterer_box-content
+            .caterer_box-btn::after {
+                bottom: 0;
+                right: -25px;
+                box-shadow: -10px 10px 0 var(--main-color);
+            }
+
+            .caterer_box
+            .caterer_box-content
+            .caterer_box-btn
+            .book_now_btn {
+                height: auto;
+                margin: 15px auto;
+            }
+
+    .caterer_box
+    .caterer_box-title {
+        width: fit-content;
+        height: fit-content;
+        margin: 5px 0 5px 10px;
+    }
+
+        .caterer_box
+        .caterer_box-title
+        h2 {
+            margin: 0;
+            color: #fff;
+        }
+
+    .caterer_box
+    .caterer_box-message {
+        padding: 0 10px;
+        color: #fff;
+        font-size: 13px;
+    }
+
+    .caterer_box
+    a.caterer_box-link {
+        color: #fff;
+        font-size: 12px;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+    }

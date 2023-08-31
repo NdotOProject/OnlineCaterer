@@ -5,12 +5,16 @@
       "PackagePath": "staticwebassets\\css\\common.css"
     },
     {
-      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\caterer_list-style.css",
-      "PackagePath": "staticwebassets\\css\\components\\caterer_list-style.css"
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\caterer_list-styles.css",
+      "PackagePath": "staticwebassets\\css\\components\\caterer_list-styles.css"
     },
     {
-      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\food_box-style.css",
-      "PackagePath": "staticwebassets\\css\\components\\food_box-style.css"
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\food_page-style.css",
+      "PackagePath": "staticwebassets\\css\\components\\food_page-style.css"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\input-custom.css",
+      "PackagePath": "staticwebassets\\css\\components\\input-custom.css"
     },
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\pagination-style.css",
@@ -71,10 +75,6 @@
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\support-bootstrap.css",
       "PackagePath": "staticwebassets\\css\\support-bootstrap.css"
-    },
-    {
-      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\favicon.png",

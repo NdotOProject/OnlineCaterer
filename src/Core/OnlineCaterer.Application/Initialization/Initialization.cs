@@ -25,8 +25,8 @@ public class Initialization
             {
                 ConstantsRoles.Caterer,
             }),
-            CatererInfo = new Domain.Entities.Caterer
-            {
+            CatererInfo = new Caterer
+			{
                 Name = "Aptech Food",
                 Address = "19 Le Thanh Nghi, Hai Ba Trung, Ha Noi, Viet Nam",
             },
@@ -41,8 +41,8 @@ public class Initialization
             {
                 ConstantsRoles.Customer,
             }),
-            CustomerInfo = new Domain.Entities.Customer
-            {
+            CustomerInfo = new Customer
+			{
                 Name = "Tom Holland",
                 Address = "Ha Noi, Viet Nam",
             },

@@ -1,7 +1,10 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using OnlineCaterer.Application.Common.Interfaces.Data;
-using OnlineCaterer.Web.Views.Auth.Caterer.FoodType;
-using OnlineCaterer.Web.Views.Caterer;
+using OnlineCaterer.Application.Common.Mappings;
+using OnlineCaterer.Web.Models.Caterer;
+using OnlineCaterer.Web.Models.Food;
+using OnlineCaterer.Web.Models.FoodType;
 
 namespace OnlineCaterer.Web.Views.Home
 {
@@ -22,13 +25,21 @@ namespace OnlineCaterer.Web.Views.Home
             _catererRepository = catererRepository;
         }
 
-        public List<FoodTypeIndexModel.FoodTypeIndexViewModel> FoodTypes { get; set; }
+        public List<FoodTypeIndexViewModel> FoodTypes { get; set; }
 
-        public List<CatererIndexModel.CatererIndexViewModel> Caterers { get; set; }
+        public List<FoodIndexViewModel> Foods { get; set; }
 
+		public List<CatererIndexViewModel> Caterers { get; set; }
 
-        public void OnGet()
+        public async Task<IActionResult> OnGetAsync()
         {
-        }
+			Caterers = await _catererRepository.GetQueryable()
+				.OrderBy(c => c.Name)
+				.Take(5)
+				.ProjectToListAsync<CatererIndexViewModel>(
+					CatererIndexViewModel.Mapper.Configuration
+				);
+            return Page();
+		}
     }
 }

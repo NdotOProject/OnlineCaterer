@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OnlineCaterer.Web.Models.Food;
 using OnlineCaterer.Web.Views.Food;
 
 namespace OnlineCaterer.Web.Views.Shared.Components.FoodBox
@@ -7,7 +8,7 @@ namespace OnlineCaterer.Web.Views.Shared.Components.FoodBox
 	{
 		public class DataHolder
 		{
-			public FoodIndexModel.FoodIndexViewModel Food { get; set; }
+			public FoodIndexViewModel Food { get; set; }
 
 			public string ReturnUrl { get; set; }
 		}

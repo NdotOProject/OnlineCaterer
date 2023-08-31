@@ -1,6 +1,6 @@
 ﻿using AutoMapper.QueryableExtensions;
 using OnlineCaterer.Application.Common.Interfaces.Data;
-using static OnlineCaterer.Web.Views.Caterer.CatererIndexModel;
+using OnlineCaterer.Web.Models.Caterer;
 
 namespace OnlineCaterer.Web.Views.Shared.Layout.Components.Header.Partials
 {
@@ -12,9 +12,10 @@ namespace OnlineCaterer.Web.Views.Shared.Layout.Components.Header.Partials
 		{
 			Caterers = catererRepository.GetQueryable()
 				.OrderBy(c => c.Name)
-				.ProjectTo<CatererIndexViewModel>(CatererIndexConfiguration)
 				.Take(3)
-				.ToList();
+				.ProjectTo<CatererIndexViewModel>(
+					CatererIndexViewModel.Mapper.Configuration
+				).ToList();
 		}
 	}
 }

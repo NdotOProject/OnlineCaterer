@@ -14,15 +14,14 @@
 	var foods = Model.Foods;
 }
 
-<div class="food_page row">
-	<div class="col-4">
+<div class="food_page">
+	<div class="food_page-sidebar">
 		@await Component.InvokeAsync("FoodTypeList", FoodTypeRepository)
 	</div>
-
-	<div class="col-8">
+	<div class="food_page-food_list">
 		@if (!foods.Items.Any())
 		{
-			<div>
+			<div class="food_list-con_content">
 				<span>
 					No Content
 				</span>
@@ -32,16 +31,19 @@
 		{
 			@foreach (var food in foods.Items)
 			{
-				@await Component.InvokeAsync(
-					"FoodBox",
-					new FoodBox.DataHolder
-					{
-						Food = food,
-						ReturnUrl = Request.Path
-					}
-				)
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					@await Component.InvokeAsync(
+						"FoodBox",
+						new FoodBox.DataHolder
+						{
+							Food = food,
+							ReturnUrl = Request.Path
+						}
+					)
+				</div>
 			}
 		}
+
 		@{
 			var paginationModel = new PaginationModel(Url)
 			{

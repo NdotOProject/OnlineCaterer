@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using OnlineCaterer.Application.Common.Interfaces;
 using OnlineCaterer.Application.Common.Interfaces.Data;
 using OnlineCaterer.Domain.Constants;
+using OnlineCaterer.Web.Models.Booking;
 
 namespace OnlineCaterer.Web.Views.Auth.Booking
 {
@@ -21,17 +22,7 @@ namespace OnlineCaterer.Web.Views.Auth.Booking
             _user = user;
         }
 
-        public class CreateBookingViewModel
-        {
-            public string CatererId { get; set; }
-
-            public DateTime EventDate { get; set; }
-
-            public DateTime BookingDate { get; set; }
-
-        }
-
-        public CreateBookingViewModel Input { get; set; }
+        public BookingCreateViewModel Input { get; set; }
 
         public List<string> Categories { get; set; }
 
@@ -40,14 +31,12 @@ namespace OnlineCaterer.Web.Views.Auth.Booking
 
 		public IActionResult OnGet()
         {
-            Categories = Request.Cookies.Select(cookie => $"{cookie.Key}={cookie.Value}").ToList();
 
             return Page();
         }
 
         public void OnPost()
         {
-            HttpContext.Session.GetString("");
         }
 
     }

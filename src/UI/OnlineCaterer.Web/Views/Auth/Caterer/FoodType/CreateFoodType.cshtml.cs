@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using OnlineCaterer.Application.Common.Interfaces;
 using OnlineCaterer.Application.Common.Interfaces.Data;
 using OnlineCaterer.Domain.Constants;
-using System.ComponentModel.DataAnnotations;
+using OnlineCaterer.Web.Models.FoodType;
 
 namespace OnlineCaterer.Web.Views.FoodType
 {
@@ -23,21 +23,8 @@ namespace OnlineCaterer.Web.Views.FoodType
             _user = user;
         }
 
-        public class CreateFoodTypeViewModel
-        {
-            [Display(Name = "Category Name")]
-            [Required]
-            [StringLength(100, MinimumLength = 1,
-                ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.")]
-            public string Name { get; set; }
-
-            [Display(Name = "Category Description")]
-            public string? Description { get; set; }
-
-        }
-
         [BindProperty]
-        public CreateFoodTypeViewModel Input { get; set; }
+        public FoodTypeCreateViewModel Input { get; set; }
 
         public IActionResult OnGet()
         {
@@ -57,10 +44,8 @@ namespace OnlineCaterer.Web.Views.FoodType
                         Description = Input.Description ?? "No Description",
                         CatererId = catererId,
                     });
-
                     await _foodTypeRepository.SaveChangesAsync();
-
-                    return RedirectToPage("./FoodTypeIndex");
+					return RedirectToPage(ViewPathManager.FoodTypeIndex);
                 }
             }
             return Page();

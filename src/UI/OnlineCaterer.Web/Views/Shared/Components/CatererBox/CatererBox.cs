@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using OnlineCaterer.Web.Views.Caterer;
+using OnlineCaterer.Web.Models.Caterer;
 
 namespace OnlineCaterer.Web.Views.Shared.Components.CatererBox
 {
 	public class CatererBox : ViewComponent
 	{
-		public IViewComponentResult Invoke(CatererIndexModel.CatererIndexViewModel model)
+		public IViewComponentResult Invoke(CatererIndexViewModel model)
 		{
 			return View("CatererBox", model);
 		}
