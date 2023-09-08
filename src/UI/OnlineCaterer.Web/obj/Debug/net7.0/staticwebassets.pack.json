@@ -5,16 +5,8 @@
       "PackagePath": "staticwebassets\\css\\common.css"
     },
     {
-      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\caterer_list-styles.css",
-      "PackagePath": "staticwebassets\\css\\components\\caterer_list-styles.css"
-    },
-    {
-      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\food_page-style.css",
-      "PackagePath": "staticwebassets\\css\\components\\food_page-style.css"
-    },
-    {
-      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\input-custom.css",
-      "PackagePath": "staticwebassets\\css\\components\\input-custom.css"
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\caterer_list-style.css",
+      "PackagePath": "staticwebassets\\css\\components\\caterer_list-style.css"
     },
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\pagination-style.css",
@@ -33,8 +25,8 @@
       "PackagePath": "staticwebassets\\css\\layout\\footer-styles.css"
     },
     {
-      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\header-style.css",
-      "PackagePath": "staticwebassets\\css\\layout\\header-style.css"
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\header-styles.css",
+      "PackagePath": "staticwebassets\\css\\layout\\header-styles.css"
     },
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\layout-style.css",
@@ -47,6 +39,18 @@
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\sidebar-style.css",
       "PackagePath": "staticwebassets\\css\\layout\\sidebar-style.css"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\page\\about_page.css",
+      "PackagePath": "staticwebassets\\css\\page\\about_page.css"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\page\\food_page-style.css",
+      "PackagePath": "staticwebassets\\css\\page\\food_page-style.css"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\page\\index-styles.css",
+      "PackagePath": "staticwebassets\\css\\page\\index-styles.css"
     },
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\reset.css",
@@ -77,6 +81,10 @@
       "PackagePath": "staticwebassets\\css\\support-bootstrap.css"
     },
     {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\about-img.png",
+      "PackagePath": "staticwebassets\\images\\about-img.png"
+    },
+    {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\favicon.png",
       "PackagePath": "staticwebassets\\images\\favicon.png"
     },
@@ -85,8 +93,8 @@
       "PackagePath": "staticwebassets\\images\\hero-bg.jpg"
     },
     {
-      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\booking-create.js",
-      "PackagePath": "staticwebassets\\js\\booking-create.js"
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\components\\menu.js",
+      "PackagePath": "staticwebassets\\js\\components\\menu.js"
     },
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\cookie.js",
@@ -99,6 +107,14 @@
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\header.js",
       "PackagePath": "staticwebassets\\js\\header.js"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\page\\booking-create.js",
+      "PackagePath": "staticwebassets\\js\\page\\booking-create.js"
+    },
+    {
+      "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\page\\index_page.js",
+      "PackagePath": "staticwebassets\\js\\page\\index_page.js"
     },
     {
       "Id": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\sidebars.js",

@@ -57,15 +57,4 @@ public class ViewPathManager
     public const string PlaceIndex = "/Place/PlaceIndex";
     #endregion
 
-	public static string WatchFromViewDir(string view)
-	{
-		return $"./{view}";
-	}
-
-	public static string WatchToViewDir(string view)
-	{
-		return $"/Views{view}";
-	}
-
-
 }

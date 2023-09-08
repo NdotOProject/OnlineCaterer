@@ -1,11 +1,23 @@
 ﻿@page "/about/"
 @using OnlineCaterer.Application.Initialization;
+@using OnlineCaterer.Web.Views.Shared.Components.AboutPage;
 @using OnlineCaterer.Web.Views.Shared.Layout.Components.Header;
 @inject CompanyInfo CompanyInfo
+@inject IRepository<OnlineCaterer.Domain.Entities.Caterer> CatererRepo
+@inject IRepository<OnlineCaterer.Domain.Entities.Customer> CustomerRepo
+@inject IRepository<OnlineCaterer.Domain.Entities.Booking> BookingRepo
 @{
 	ViewData["Title"] = NavItemManager.AboutPage.PageTitle;
 }
 
-<h1>@(NavItemManager.AboutPage.PageTitle)</h1>
-
-@CompanyInfo.Brand
+@(
+await Component.InvokeAsync<AboutPage>(
+		new AboutPage.Data
+		{
+			Company = CompanyInfo,
+			CatererCount = CatererRepo.GetQueryable().Count(),
+			CustomerCount = CustomerRepo.GetQueryable().Count(),
+			TransactionCount = BookingRepo.GetQueryable().Count()
+		}
+	)
+)

@@ -35,6 +35,7 @@
         border-radius: 15px;
         background: var(--background-url);
         background-size: cover;
+        background-position-x: center;
     }
 
         .caterer_box

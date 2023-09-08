@@ -1,0 +1,499 @@
+﻿@import url(../common.css);
+
+:root {
+    --sidebar-width: 20%;
+    --food_box-width: 350px;
+    --food_box-height: 400px;
+}
+
+.food_page {
+    width: 100%;
+    position: relative;
+}
+
+    .food_page
+    .food_page-sidebar {
+        width: var(--sidebar-width);
+        display: flex;
+        justify-content: center;
+        position: fixed;
+    }
+
+    .food_page
+    .food_page-food_list {
+        width: calc(100% - var(--sidebar-width));
+        min-height: 500px;
+        display: flex;
+        position: relative;
+        left: var(--sidebar-width);
+    }
+
+        .food_page
+        .food_page-food_list
+        #pagination-box {
+            position: absolute;
+            bottom: 0;
+        }
+
+.food_box {
+    max-width: var(--food_box-width);
+    min-width: var(--food_box-width);
+    max-height: var(--food_box-height);
+    min-height: var(--food_box-height);
+    border-radius: 15px;
+    background: linear-gradient(to bottom, #f1f2f3 25px, var(--main-color) 25px);
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+    .food_box
+    .food_box-top {
+        height: 215px;
+        border-radius: 0 0 0 45px;
+        background: #f1f2f3;
+        margin: -1px;
+        padding: 25px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        -ms-flex-pack: center;
+        -ms-flex-align: center;
+    }
+
+        .food_box
+        .food_box-top
+        img {
+            max-width: 100%;
+            max-height: 145px;
+            -webkit-transition: all .2s;
+                    transition: all .2s;
+        }
+
+    .food_box:hover
+    .food_box-top
+    img {
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+    }
+
+    .food_box
+    .food_box-center {
+        color: #fff;
+        padding: 10px;
+    }
+
+        .food_box
+        .food_box-center
+        h5 {
+            text-align: center;
+        }
+
+        .food_box
+        .food_box-center
+        p
+        a {
+            font-size: 13px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .food_box
+        .food_box-center
+        ul
+        a:hover {
+            color: var(--highlight-color-second);
+        }
+
+    .food_box
+    .food_box-bottom {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 10px;
+    }
+
+        .food_box
+        .food_box-bottom
+        .food_box-price {
+            color: #fff;
+        }
+
+        .food_box
+        .food_box-bottom
+        .add_to_cart-btn {
+            position: absolute;
+            right: 60px;
+            top: 0;
+        }
+
+.add_to_cart-btn {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+    .add_to_cart-btn
+    input[type=checkbox] {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .add_to_cart-btn
+    .add_to_cart-front {
+        width: 43px;
+        height: 43px;
+        border: 3px solid var(--highlight-color);
+        border-radius: 50%;
+        background-color: var(--main-color);
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .add_to_cart-btn
+        .add_to_cart-front
+        svg {
+            fill: #fff;
+            -webkit-animation: ring 4s .7s ease-in-out infinite;
+               -moz-animation: ring 4s .7s ease-in-out infinite;
+                    animation: ring 4s .7s ease-in-out infinite;
+            -webkit-transform-origin: 50% 4px;
+               -moz-transform-origin: 50% 4px;
+                    transform-origin: 50% 4px;
+        }
+
+    .add_to_cart-btn:hover
+    input[type=checkbox] ~ .add_to_cart-front
+    svg {
+        fill: var(--highlight-color-second);
+    }
+
+    .add_to_cart-btn
+    input[type=checkbox]:checked ~ .add_to_cart-front::after {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 20px;
+        border: solid var(--highlight-color-second);
+        border-width: 0 3px 3px 0;
+        position: absolute;
+        top: 7px;
+        left: 14.5px;
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+    }
+
+@-webkit-keyframes ring {
+    0% {
+        -webkit-transform: rotateZ(0);
+    }
+
+    1% {
+        -webkit-transform: rotateZ(30deg);
+    }
+
+    3% {
+        -webkit-transform: rotateZ(-28deg);
+    }
+
+    5% {
+        -webkit-transform: rotateZ(34deg);
+    }
+
+    7% {
+        -webkit-transform: rotateZ(-32deg);
+    }
+
+    9% {
+        -webkit-transform: rotateZ(30deg);
+    }
+
+    11% {
+        -webkit-transform: rotateZ(-28deg);
+    }
+
+    13% {
+        -webkit-transform: rotateZ(26deg);
+    }
+
+    15% {
+        -webkit-transform: rotateZ(-24deg);
+    }
+
+    17% {
+        -webkit-transform: rotateZ(22deg);
+    }
+
+    19% {
+        -webkit-transform: rotateZ(-20deg);
+    }
+
+    21% {
+        -webkit-transform: rotateZ(18deg);
+    }
+
+    23% {
+        -webkit-transform: rotateZ(-16deg);
+    }
+
+    25% {
+        -webkit-transform: rotateZ(14deg);
+    }
+
+    27% {
+        -webkit-transform: rotateZ(-12deg);
+    }
+
+    29% {
+        -webkit-transform: rotateZ(10deg);
+    }
+
+    31% {
+        -webkit-transform: rotateZ(-8deg);
+    }
+
+    33% {
+        -webkit-transform: rotateZ(6deg);
+    }
+
+    35% {
+        -webkit-transform: rotateZ(-4deg);
+    }
+
+    37% {
+        -webkit-transform: rotateZ(2deg);
+    }
+
+    39% {
+        -webkit-transform: rotateZ(-1deg);
+    }
+
+    41% {
+        -webkit-transform: rotateZ(1deg);
+    }
+
+    43% {
+        -webkit-transform: rotateZ(0);
+    }
+
+    100% {
+        -webkit-transform: rotateZ(0);
+    }
+}
+
+@-moz-keyframes ring {
+    0% {
+        -moz-transform: rotate(0);
+    }
+
+    1% {
+        -moz-transform: rotate(30deg);
+    }
+
+    3% {
+        -moz-transform: rotate(-28deg);
+    }
+
+    5% {
+        -moz-transform: rotate(34deg);
+    }
+
+    7% {
+        -moz-transform: rotate(-32deg);
+    }
+
+    9% {
+        -moz-transform: rotate(30deg);
+    }
+
+    11% {
+        -moz-transform: rotate(-28deg);
+    }
+
+    13% {
+        -moz-transform: rotate(26deg);
+    }
+
+    15% {
+        -moz-transform: rotate(-24deg);
+    }
+
+    17% {
+        -moz-transform: rotate(22deg);
+    }
+
+    19% {
+        -moz-transform: rotate(-20deg);
+    }
+
+    21% {
+        -moz-transform: rotate(18deg);
+    }
+
+    23% {
+        -moz-transform: rotate(-16deg);
+    }
+
+    25% {
+        -moz-transform: rotate(14deg);
+    }
+
+    27% {
+        -moz-transform: rotate(-12deg);
+    }
+
+    29% {
+        -moz-transform: rotate(10deg);
+    }
+
+    31% {
+        -moz-transform: rotate(-8deg);
+    }
+
+    33% {
+        -moz-transform: rotate(6deg);
+    }
+
+    35% {
+        -moz-transform: rotate(-4deg);
+    }
+
+    37% {
+        -moz-transform: rotate(2deg);
+    }
+
+    39% {
+        -moz-transform: rotate(-1deg);
+    }
+
+    41% {
+        -moz-transform: rotate(1deg);
+    }
+
+    43% {
+        -moz-transform: rotate(0);
+    }
+
+    100% {
+        -moz-transform: rotate(0);
+    }
+}
+
+@keyframes ring {
+    0% {
+        transform: rotate(0);
+    }
+
+    1% {
+        transform: rotate(30deg);
+    }
+
+    3% {
+        transform: rotate(-28deg);
+    }
+
+    5% {
+        transform: rotate(34deg);
+    }
+
+    7% {
+        transform: rotate(-32deg);
+    }
+
+    9% {
+        transform: rotate(30deg);
+    }
+
+    11% {
+        transform: rotate(-28deg);
+    }
+
+    13% {
+        transform: rotate(26deg);
+    }
+
+    15% {
+        transform: rotate(-24deg);
+    }
+
+    17% {
+        transform: rotate(22deg);
+    }
+
+    19% {
+        transform: rotate(-20deg);
+    }
+
+    21% {
+        transform: rotate(18deg);
+    }
+
+    23% {
+        transform: rotate(-16deg);
+    }
+
+    25% {
+        transform: rotate(14deg);
+    }
+
+    27% {
+        transform: rotate(-12deg);
+    }
+
+    29% {
+        transform: rotate(10deg);
+    }
+
+    31% {
+        transform: rotate(-8deg);
+    }
+
+    33% {
+        transform: rotate(6deg);
+    }
+
+    35% {
+        transform: rotate(-4deg);
+    }
+
+    37% {
+        transform: rotate(2deg);
+    }
+
+    39% {
+        transform: rotate(-1deg);
+    }
+
+    41% {
+        transform: rotate(1deg);
+    }
+
+    43% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}

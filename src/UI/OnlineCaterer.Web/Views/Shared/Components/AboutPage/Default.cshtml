@@ -1,0 +1,82 @@
+﻿@using OnlineCaterer.Application.Initialization;
+@using OnlineCaterer.Web.Views.Shared.Components.AboutPage;
+@using OnlineCaterer.Web.Views.Shared.Layout.Components.Header;
+@model AboutPage.Data
+
+
+<section class="about_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ">
+                <div class="about_section-img">
+                    <img src="~/images/about-img.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about_section-detail">
+                    <div class="heading_container">
+                        <h2>
+                            @Model.Company.Brand
+                        </h2>
+                    </div>
+                    <p>
+                        @Model.Company.Introduction
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="achievement_section">
+    <div class="container graph">
+        <div class="graph_line">
+            <div class="y_line">
+                @{
+                    var max = Math.Max(
+                        Math.Max(
+                            Model.CatererCount,
+                            Model.CustomerCount
+                        ),
+                        Model.TransactionCount
+                    );
+                }
+                <span style="--line_value-length: @(max.ToString().Length);">
+                    @(max)
+                </span>
+            </div>
+            <div class="x_line">
+                <span style="--line_value-length: 1;">
+                    0
+                </span>
+            </div>
+        </div>
+        <div class="graph_column" style="--offset-value: 0.5;">
+            <span class="column_desert">
+                @Model.CatererCount
+            </span>
+            <div style="--column-height: @Model.CatererCount"></div>
+            <span class="column_name">
+                Caterer
+            </span>
+        </div>
+        <div class="graph_column" style="--offset-value: 1.5;">
+            <span class="column_desert">
+                @Model.CustomerCount
+            </span>
+            <div style="--column-height: @Model.CustomerCount"></div>
+            <span class="column_name">
+                Customer
+            </span>
+        </div>
+        <div class="graph_column" style="--offset-value: 2.5;">
+            <span class="column_desert">
+                @Model.TransactionCount
+            </span>
+            <div style="--column-height: @Model.TransactionCount"></div>
+            <span class="column_name">
+                Transaction
+            </span>
+        </div>
+    </div>
+</section>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HPnsCihhqhfUAQ392eRiHJE95RaiRAP+OC10UW2qxTI=",
+  "Hash": "R8bC4sJblFr6TzBEiAU2bfk6tISS7vGDA8CPOxPxAjw=",
   "Source": "OnlineCaterer.Web",
   "BasePath": "_content/OnlineCaterer.Web",
   "Mode": "Default",
@@ -1054,12 +1054,12 @@
       "OriginalItemSpec": "wwwroot\\css\\common.css"
     },
     {
-      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\caterer_list-styles.css",
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\caterer_list-style.css",
       "SourceId": "OnlineCaterer.Web",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
       "BasePath": "_content/OnlineCaterer.Web",
-      "RelativePath": "css/components/caterer_list-styles.css",
+      "RelativePath": "css/components/caterer_list-style.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1068,41 +1068,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\components\\caterer_list-styles.css"
-    },
-    {
-      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\food_page-style.css",
-      "SourceId": "OnlineCaterer.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
-      "BasePath": "_content/OnlineCaterer.Web",
-      "RelativePath": "css/components/food_page-style.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\components\\food_page-style.css"
-    },
-    {
-      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\input-custom.css",
-      "SourceId": "OnlineCaterer.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
-      "BasePath": "_content/OnlineCaterer.Web",
-      "RelativePath": "css/components/input-custom.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\components\\input-custom.css"
+      "OriginalItemSpec": "wwwroot\\css\\components\\caterer_list-style.css"
     },
     {
       "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\components\\pagination-style.css",
@@ -1173,12 +1139,12 @@
       "OriginalItemSpec": "wwwroot\\css\\layout\\footer-styles.css"
     },
     {
-      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\header-style.css",
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\header-styles.css",
       "SourceId": "OnlineCaterer.Web",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
       "BasePath": "_content/OnlineCaterer.Web",
-      "RelativePath": "css/layout/header-style.css",
+      "RelativePath": "css/layout/header-styles.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1187,7 +1153,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\layout\\header-style.css"
+      "OriginalItemSpec": "wwwroot\\css\\layout\\header-styles.css"
     },
     {
       "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\layout\\layout-style.css",
@@ -1239,6 +1205,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\layout\\sidebar-style.css"
+    },
+    {
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\page\\about_page.css",
+      "SourceId": "OnlineCaterer.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
+      "BasePath": "_content/OnlineCaterer.Web",
+      "RelativePath": "css/page/about_page.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\page\\about_page.css"
+    },
+    {
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\page\\food_page-style.css",
+      "SourceId": "OnlineCaterer.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
+      "BasePath": "_content/OnlineCaterer.Web",
+      "RelativePath": "css/page/food_page-style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\page\\food_page-style.css"
+    },
+    {
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\page\\index-styles.css",
+      "SourceId": "OnlineCaterer.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
+      "BasePath": "_content/OnlineCaterer.Web",
+      "RelativePath": "css/page/index-styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\page\\index-styles.css"
     },
     {
       "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\css\\reset.css",
@@ -1360,6 +1377,23 @@
       "OriginalItemSpec": "wwwroot\\css\\support-bootstrap.css"
     },
     {
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\about-img.png",
+      "SourceId": "OnlineCaterer.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
+      "BasePath": "_content/OnlineCaterer.Web",
+      "RelativePath": "images/about-img.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\about-img.png"
+    },
+    {
       "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\images\\favicon.png",
       "SourceId": "OnlineCaterer.Web",
       "SourceType": "Discovered",
@@ -1394,12 +1428,12 @@
       "OriginalItemSpec": "wwwroot\\images\\hero-bg.jpg"
     },
     {
-      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\booking-create.js",
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\components\\menu.js",
       "SourceId": "OnlineCaterer.Web",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
       "BasePath": "_content/OnlineCaterer.Web",
-      "RelativePath": "js/booking-create.js",
+      "RelativePath": "js/components/menu.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1408,7 +1442,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\booking-create.js"
+      "OriginalItemSpec": "wwwroot\\js\\components\\menu.js"
     },
     {
       "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\cookie.js",
@@ -1460,6 +1494,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\header.js"
+    },
+    {
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\page\\booking-create.js",
+      "SourceId": "OnlineCaterer.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
+      "BasePath": "_content/OnlineCaterer.Web",
+      "RelativePath": "js/page/booking-create.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\page\\booking-create.js"
+    },
+    {
+      "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\page\\index_page.js",
+      "SourceId": "OnlineCaterer.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\",
+      "BasePath": "_content/OnlineCaterer.Web",
+      "RelativePath": "js/page/index_page.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\page\\index_page.js"
     },
     {
       "Identity": "D:\\Projects\\Aptech\\Semester_3\\OnlineCaterer\\src\\UI\\OnlineCaterer.Web\\wwwroot\\js\\sidebars.js",

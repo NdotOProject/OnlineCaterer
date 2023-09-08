@@ -1,21 +1,96 @@
 ﻿@page "/"
+@using OnlineCaterer.Application.Initialization;
+@using OnlineCaterer.Web.Views.Shared.Components.AboutPage;
+@using OnlineCaterer.Web.Views.Shared.Components.FoodBox;
 @using OnlineCaterer.Web.Views.Shared.Layout.Components.Header;
+
 @model OnlineCaterer.Web.Views.Home.IndexModel
+
+@inject CompanyInfo CompanyInfo
+@inject IRepository<OnlineCaterer.Domain.Entities.Caterer> CatererRepo
+@inject IRepository<OnlineCaterer.Domain.Entities.Customer> CustomerRepo
+@inject IRepository<OnlineCaterer.Domain.Entities.Booking> BookingRepo
+
 @{
     ViewBag.Title = NavItemManager.HomePage.PageTitle;
 }
 
 <div class="container">
-    show list food & food type
+    <div class="caterer_carousel">
+        <h2>Our Partner</h2>
+        @{
+            int middle = Model.Caterers.Count / 2;
+            int offsetValue = 0;
+            int zIndexValue = 0;
+            bool isReverse = false;
+            foreach(var caterer in Model.Caterers)
+            {
+                <div class="caterer_carousel-item @(offsetValue == middle ? "active" : "")"
+                    style="--offset-value: @(offsetValue); z-index: @(zIndexValue);"
+                >
+                    @await Component.InvokeAsync("CatererBox", caterer)
+                </div>
+                offsetValue++;
+                if (isReverse)
+                {
+                    zIndexValue--;
+                }
+                else
+                {
+                    zIndexValue++;
+                    isReverse = zIndexValue == middle;
+                }
 
-
-    show list caterer
-    @foreach(var caterer in Model.Caterers)
-    {
-        
-    }
-
-    show place
-
-
+            }
+        }
+    </div>
+    <div class="food_range">
+        <h2>Our Food</h2>
+        <ul class="small_category_list">
+            <li class="active" data-filter="*">All</li>
+        @foreach (var catetory in Model.FoodTypes)
+        {
+            <li data-filter=".@(catetory.Name)">
+                @catetory.Name
+            </li>
+        }
+        </ul>
+        <div class="small_food_list">
+            @foreach (var food in Model.Foods)
+            {
+                <div class="col-lg-4 col-md-6 col-sm-12 all @(food.Category)">
+                    @await Component.InvokeAsync(
+                        "FoodBox",
+                        new FoodBox.DataHolder
+                        {
+                            Food = food,
+                            ReturnUrl = Request.Path
+                        }
+                    )
+                </div>
+            }
+            <div class="book_now_btn">
+                <a asp-page="@(ViewPathManager.FoodIndex)">
+                    View More
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
+
+@(
+await Component.InvokeAsync<AboutPage>(
+        new AboutPage.Data
+        {
+            Company = CompanyInfo,
+            CatererCount = CatererRepo.GetQueryable().Count(),
+            CustomerCount = CustomerRepo.GetQueryable().Count(),
+            TransactionCount = BookingRepo.GetQueryable().Count()
+        }
+    )
+)
+
+<script src="~/vender/jquery-3.7.0/jquery-3.7.0.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+<script src="~/js/page/index_page.js"></script>
+<script src="~/js/components/menu.js"></script>

@@ -4,50 +4,65 @@
 
 @{
 	var food = Model.Food;
+	var checkboxId = $"add_to_cart-{food.FoodId}";
+	var labelId = $"add_to_cart-{food.FoodId}-label";
 }
 
 <div class="food_box">
 	<div class="food_box-top">
-		<div class="food-img"></div>
+		<img src="~/images/hero-bg.jpg" alt="" />
 	</div>
 	<div class="food_box-center">
-		<div class="food_box-detail">
-			<h5>@food.Name</h5>
-			<ul>
-				<li>
-					@food.Category
-				</li>
-				<li>
-					@(!food.Discontinued
-						? "Still Production"
-						: "Stop Production"
-					)
-				</li>
-				<li>
+		<h5>@food.Name</h5>
+		@{
+			var description = food.Description;
+			if (description.Length < 100)
+			{
+				<p>
+					@description
+				</p>
+			}
+			else
+			{
+				<p>
+					@description.Substring(0, 97).Concat("...")
 					<a asp-page="@(ViewPathManager.FoodDetails)"
-					   asp-route-categoryId="@food.CategoryId"
-					   asp-route-foodId="@food.FoodId"
-					   asp-route-returnUrl="@Model.ReturnUrl"
-					   class="">
+						asp-route-categoryId="@food.CategoryId"
+						asp-route-foodId="@food.FoodId"
+						asp-route-returnUrl="@Model.ReturnUrl"
+						class=""
+					>
 						more information
 					</a>
-				</li>
-			</ul>
-		</div>
+				</p>
+			}
+		}
 	</div>
 	<div class="food_box-bottom">
 		<h6 class="food_box-price">
 			@food.Price.ToString("C3", CultureInfo.CurrentCulture)
 		</h6>
-		<div class="checkbox-container">
+		<div class="add_to_cart-btn">
 			<input type="checkbox"
-				id="@($"add_to_cart-{food.FoodId}")"
+				id="@(checkboxId)"
 				name="add_to_cart"
-				value="@food.FoodId"
+				value="@($"food-{food.FoodId}")"
 			/>
-			<label class="checkbox-face" for="@($"add_to_cart-{food.FoodId}")">
+			<label class="add_to_cart-front"
+				for="@(checkboxId)"
+				id="@(labelId)"
+			>
 				<partial name="Icons/fa-cart-shopping-icon" />
 			</label>
+			<script>
+				import('/js/page/booking-create.js').then((module) => {
+					module.toggleSvg(
+						'@(checkboxId)',
+						'@(labelId)',
+						`@(await Html.PartialAsync("Icons/fa-cart-shopping-icon"))`
+					);
+				});
+			</script>
 		</div>
 	</div>
 </div>

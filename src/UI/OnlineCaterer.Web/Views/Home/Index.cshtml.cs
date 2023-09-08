@@ -33,7 +33,29 @@ namespace OnlineCaterer.Web.Views.Home
 
         public async Task<IActionResult> OnGetAsync()
         {
-			Caterers = await _catererRepository.GetQueryable()
+            FoodTypes = await _foodTypeRepository
+                .GetQueryable()
+                .OrderBy(ft => ft.Name)
+                .Take(4)
+                .ProjectToListAsync<FoodTypeIndexViewModel>(
+                    FoodTypeIndexViewModel.Mapper.Configuration
+                );
+
+            var foodTypeIds = FoodTypes
+                .Select(ft => ft.Id)
+                .ToList();
+
+            Foods = await _foodRespoitory
+                .GetQueryable()
+                .Where(f => foodTypeIds.Contains(f.CategoryId))
+                .Take(9)
+                .OrderBy(f => f.Name)
+                .ProjectToListAsync<FoodIndexViewModel>(
+                    FoodIndexViewModel.Mapper.Configuration
+                ); 
+
+			Caterers = await _catererRepository
+                .GetQueryable()
 				.OrderBy(c => c.Name)
 				.Take(5)
 				.ProjectToListAsync<CatererIndexViewModel>(

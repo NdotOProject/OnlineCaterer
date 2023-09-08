@@ -1,0 +1,136 @@
+﻿@import url(../common.css);
+
+:root {
+    --carousel_item-width: 382px;
+    --carousel_item-height: 420px;
+}
+
+.food_range
+h2 {
+    text-align: center;
+}
+
+.food_range
+.small_category_list {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+       -ms-flex-pack: center;
+    justify-content: center;
+    list-style-type: none;
+    margin: 45px 0 20px 0;
+}
+
+    .food_range
+    .small_category_list
+    li {
+        padding: 7px 25px;
+        cursor: pointer;
+        border-radius: 25px;
+    }
+
+        .food_range
+        .small_category_list
+        li.active {
+            background-color: var(--main-color);
+            color: #ffffff;
+        }
+
+.small_food_list {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+    .small_food_list
+    .book_now_btn {
+        height: 50px;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+
+.caterer_carousel {
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 50px;
+}
+
+    .caterer_carousel
+    .caterer_carousel-item {
+        width: var(--carousel_item-width);
+        height: var(--carousel_item-height);
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 0 5px 2px #000;
+        padding: 0 10px;
+        position: absolute;
+    }
+
+        .caterer_carousel
+        .caterer_carousel-item::after {
+            content: '';
+            display: block;
+            width: var(--carousel_item-width);
+            height: 100%;
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.2;
+        }
+
+        .caterer_carousel
+        .caterer_carousel-item.active {
+            height: calc(var(--carousel_item-height) + 20px);
+            padding: 1px 11px;
+        }
+
+            .caterer_carousel
+            .caterer_carousel-item.active::after {
+                display: none;
+            }
+
+            .caterer_carousel
+            .caterer_carousel-item.active
+            .caterer_box {
+                height: var(--carousel_item-height);
+            }
+
+                .caterer_carousel
+                .caterer_carousel-item.active
+                .caterer_box
+                .caterer_box-img {
+                    height: 250px;
+                }
+
+                .caterer_carousel
+                .caterer_carousel-item.active
+                .caterer_box
+                .caterer_box-content {
+                    height: 160px;
+                }
+
+        .caterer_carousel
+        .caterer_carousel-item
+        .caterer_box
+        .caterer_box-message {
+            position: relative;
+            top: 35px;
+        }
+
+    .caterer_carousel
+    h2 {
+        position: absolute;
+        top: 0;
+    }

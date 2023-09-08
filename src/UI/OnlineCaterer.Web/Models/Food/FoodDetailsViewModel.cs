@@ -5,10 +5,8 @@ namespace OnlineCaterer.Web.Models.Food
 	public class FoodDetailsViewModel : FoodIndexViewModel
 	{
 		public string QuantityPerUnit { get; set; }
-
-		public string Description { get; set; }
-
 		public string? Caterers { get; set; }
+		public bool Discontinued { get; set; }
 
 		public new class Mapper
 		{
